@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-none-focus:focus{
+    box-shadow: none !important;
+}
+
+@layer utilities {
+    .rounded-s-4xl {
+        border-start-start-radius: 4rem;
+        border-end-start-radius: 4rem;
+    }
+
+    #auth-vector-style {
+        background-image: url('/src/assets/images/auth/Vector.png');
+        background-position-x: right;
+        background-repeat: repeat-y;
+        background-size: 30% 100%;
+    }
+
+    .size-14px {
+        font-size: 14px;
+    }
+
+    .size-24px {
+        font-size: 24px;
+    }
+
+    .daisy-hover-blue-jeans-100:hover{
+        transition: all 0.3s;
+        background-color: #EFF9FF;
+    }
+
+    .box-shadow{
+        box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    }
+
+    .card-box-shadow{
+        box-shadow: 0px 1px 5px 2px #dbdbdb;
+    };
+}
