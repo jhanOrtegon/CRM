@@ -12,3 +12,4 @@ export const CardState = ({ type='success', text, variant }: TCardState) => (
 )
 
 
+
