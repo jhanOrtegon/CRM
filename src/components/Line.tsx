@@ -4,7 +4,7 @@ import React from "react";
 import { AxisOptions, Chart } from "react-charts";
 
 export default function Line() {
-    const { data, randomizeData } = useDemoConfig({
+    const { data } = useDemoConfig({
         series: 2,
         dataType: "time",
     });
