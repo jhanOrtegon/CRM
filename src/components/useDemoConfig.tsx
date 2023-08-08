@@ -157,7 +157,7 @@ export default function useChartConfig({
         >
           {options[option].map((d) => (
             <option value={d as string} key={d.toString()}>
-              {d.toString()}
+              {d.toString()}randomizeData
             </option>
           ))}
         </select>
