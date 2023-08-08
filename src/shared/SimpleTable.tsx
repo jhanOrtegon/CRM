@@ -11,7 +11,7 @@ type TSImpleTable = {
     anchor?: 'medium' | 'small' | 'large',
 }
 
-export function SimpleTable({ TableHeadRow, TableBodyRow, anchor='large', size = 'medium' }: TSImpleTable) {
+export function SimpleTable({ TableHeadRow, TableBodyRow, anchor='large', size = 'small' }: TSImpleTable) {
 
     return (
         <TableContainer component={Paper}>
