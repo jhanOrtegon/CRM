@@ -23,7 +23,8 @@ import {
   PlacesPage,
   UsersPage,
   ServicesPage,
-  ConnectionsPage
+  ConnectionsPage,
+  TaskPage
 } from "@/pages/private";
 
 
@@ -50,7 +51,7 @@ const AppRoutes = () => {
 
         <Route element={<ProtectedRoute isAllowed={true} />}>
           <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/task" element={<TagsPage />} />
+          <Route path="/task" element={<TaskPage />} />
 
           <Route path="/contacts/myContacts" element={<MyContactsPage />} />
           <Route path="/contacts/referees" element={<RefereesPage />} />

@@ -13,7 +13,7 @@ import Line from "@/components/Line";
 
 export const DashboardPage = () => {
     return (
-        <GeneralLayout title="DashboardPage">
+        <GeneralLayout title="Dashboard">
             <>
                 <Grid container spacing={2} sx={{ height: '45vh' }}>
 

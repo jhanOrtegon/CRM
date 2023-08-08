@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.shadow-none-focus:focus{
+.shadow-none-focus:focus {
     box-shadow: none !important;
+}
+
+.btn{
+    text-transform: math-auto;
 }
 
 @layer utilities {
@@ -27,16 +31,37 @@
         font-size: 24px;
     }
 
-    .daisy-hover-blue-jeans-100:hover{
+    .daisy-hover-blue-jeans-100:hover {
         transition: all 0.3s;
         background-color: #EFF9FF;
     }
 
-    .box-shadow{
-        box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    .box-shadow {
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     }
 
-    .card-box-shadow{
+    .card-box-shadow {
         box-shadow: 0px 1px 5px 2px #dbdbdb;
-    };
+    }
+
+    .vw-70 {
+        width: 70vh !important;
+    }
+
+    .vw-50 {
+        width: 50vh !important;
+    }
+
+    .vw-30 {
+        width: 30vh !important;
+    }
+
+    .vw-40 {
+        width: 40vh !important;
+    }
+
+    .vw-25 {
+        width: 25vh !important;
+    }
+
 }

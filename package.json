@@ -17,6 +17,7 @@
     "@types/node": "^16.7.13",
     "@types/react-resizable": "^3.0.4",
     "axios": "^1.4.0",
+    "nanoid": "^4.0.2",
     "react": "^18.2.0",
     "react-charts": "^3.0.0-beta.55",
     "react-circular-progressbar": "^2.1.0",

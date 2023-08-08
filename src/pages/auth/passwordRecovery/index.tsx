@@ -99,8 +99,9 @@ export const Component = () => {
                             </div>
 
                             <Button
+                                color="secondary"
                                 sx={{ marginTop: '2rem' }}
-                                className='bg-daisy-space-100 w-9/12 m-auto self-center'
+                                className='w-9/12 m-auto self-center'
                                 variant="contained"
                                 size="large"
                                 onClick={handleValidation}

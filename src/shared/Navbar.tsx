@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router-dom"
-import { useState, ReactElement } from 'react';
+import { useState } from 'react';
 import { IconBell } from '@tabler/icons-react';
 
 
 type TDetailsComponent = {
     summary: string,
-    children: ReactElement | string,
+    children: React.ReactNode
     path: string
 }
 
@@ -24,7 +24,7 @@ export const Navbar = () => {
         return (
             <details onToggle={(event) => onToggleOpen(event, summary)} open={(menuSelected === summary)}>
                 {/* className={menuSelected === summary ? '-bg--daisy-blue-jeans-100 text-white hover:text-white' : ''} */}
-                <summary className={location.pathname.includes(path) ? 'bg-accent text-white' : 'hover:text-white'}>
+                <summary className={location.pathname.includes(path) ? 'bg-daisy-accent-navbar text-white hover:text-white' : 'hover:text-white'}>
                     {summary}
                 </summary>
                 {children}

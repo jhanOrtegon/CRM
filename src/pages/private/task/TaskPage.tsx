@@ -1,9 +1,9 @@
 import { GeneralLayout } from "@/components/layouts"
 
-export const TagsPage = () => {
+export const TaskPage = () => {
     return (
         <GeneralLayout>
-            TagsPage
+            TaskPage
         </GeneralLayout>
     )
 }
