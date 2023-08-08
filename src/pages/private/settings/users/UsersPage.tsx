@@ -4,6 +4,9 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import { nanoid } from "nanoid";
 
+// images
+import avatarMen from '@/assets/images/avatars/avatarMen.png'
+
 function createData(
   user: string,
   role: string,
@@ -72,7 +75,7 @@ export const UsersPage = () => {
             >
               <TableCell className="text-daisy-space-40" align="left">
                 <div className="flex gap-2 items-center">
-                  <img src="/src/assets/images/avatars/avatarMen.png" alt="logo-user" width={25} />
+                  <img src={avatarMen} alt="logo-user" width={25} />
                   {row.user}
                 </div>
               </TableCell>

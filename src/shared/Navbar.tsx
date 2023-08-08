@@ -2,6 +2,11 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from 'react';
 import { IconBell } from '@tabler/icons-react';
 
+//images
+import avatarMenLg from '@/assets/images/avatars/avatarMenLg.png'
+import avatarMen from '@/assets/images/avatars/avatarMen.png'
+import navbarLogo from '@/assets/images/logos/navbarLogo.png'
+import happy from '@/assets/icons/happy.png'
 
 type TDetailsComponent = {
     summary: string,
@@ -42,7 +47,7 @@ export const Navbar = () => {
                 onClick={()=>navigate('/dashboard')}
             >
                 <a className="btn btn-ghost normal-case text-xl">
-                    <img src='/src/assets/images/logos/navbarLogo.png' />
+                    <img src={navbarLogo} />
                 </a>
             </div>
 
@@ -236,13 +241,13 @@ export const Navbar = () => {
             <div className="navbar-end">
                 <div className="dropdown dropdown-end">
                     <div className="flex gap-5 items-center">
-                        <img src={'/src/assets/icons/happy.png'} alt="happy" className="cursor-pointer" />
+                        <img src={happy} alt="happy" className="cursor-pointer" />
 
                         <IconBell className="text-white cursor-pointer" />
 
                         <div tabIndex={0} className="btn btn-ghost flex items-center gap-3 px-2 text-white">
                             <label className="btn btn-circle avatar border-0">
-                                <img src="/src/assets/images/avatars/avatarMenLg.png" />
+                                <img src={avatarMenLg} />
                             </label>
                             <div>Richard C.</div>
                         </div>
@@ -252,7 +257,7 @@ export const Navbar = () => {
 
                     <div tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <div className="flex gap-3 items-center">
-                            <img src="/src/assets/images/avatars/avatarMen.png" />
+                            <img src={avatarMen} />
                             <div className="text-daisy-space-100">
                                 <div className="font-bold text-base">Richard Castro</div>
                                 <div className="text-sm font-medium">Ver perfil</div>

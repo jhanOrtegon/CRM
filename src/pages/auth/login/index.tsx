@@ -10,6 +10,8 @@ import { IconEyeClosed, IconEyeCheck, IconCircle1Filled, IconSquareRoundedX } fr
 
 // images
 import bgLogin from '@/assets/images/auth/bgLogin.png'
+import avatarMen from '@/assets/images/avatars/avatarMen.png'
+import avatarWoMen from '@/assets/images/avatars/avatarWoMen.png'
 
 
 export const Component = () => {
@@ -108,7 +110,7 @@ export const Component = () => {
                         >
                             <div className="avatar">
                                 <div className="rounded-full">
-                                    <img src="/src/assets/images/avatars/avatarMen.png" className="h-auto max-w-full" />
+                                    <img src={avatarMen} className="h-auto max-w-full" />
                                 </div>
                             </div>
                             <div>
@@ -126,7 +128,7 @@ export const Component = () => {
                         >
                             <div className="avatar">
                                 <div className="rounded-full">
-                                    <img src="/src/assets/images/avatars/avatarWoMen.png" className="h-auto max-w-full" />
+                                    <img src={avatarWoMen} className="h-auto max-w-full" />
                                 </div>
                             </div>
                             <div>
