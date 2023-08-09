@@ -81,7 +81,7 @@ export const LoginPage = () => {
                 <div className="flex flex-col justify-center">
                     <Button
                         color="secondary"
-                        sx={{ marginTop: '1rem' }}
+                        sx={{ marginTop: '2rem' }}
                         className='w-9/12 m-auto self-center'
                         variant="contained"
                         size="large"
@@ -91,7 +91,7 @@ export const LoginPage = () => {
                     </Button>
 
                     <div
-                        className="flex justify-center w-9/12 m-auto gap-1 p-3 my-3 -text--daisy-blue-jeans-100  daisy-hover-blue-jeans-100 rounded-lg cursor-pointer"
+                        className="flex justify-center w-9/12 m-auto gap-1 p-3 mt-3 -text--daisy-blue-jeans-100  daisy-hover-blue-jeans-100 rounded-lg cursor-pointer"
                         onClick={() => navigate("/auth/passwordRecovery")}
                     >
                         <div>¿Has olvidado tu contraseña?</div>
