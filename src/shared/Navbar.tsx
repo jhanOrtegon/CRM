@@ -40,7 +40,7 @@ export const Navbar = () => {
 
     return (
 
-        <div className="navbar bg-daisy-space-100 px-8 h-20">
+        <div className="navbar bg-daisy-space-100 px-8 h-16">
 
             <div 
                 className="navbar-start w-2/6"

@@ -10,7 +10,16 @@
     text-transform: math-auto;
 }
 
+.vh-43{
+    height: 43vh;
+}
+
+.vh-30{
+    height: 30vh;
+}
+
 @layer utilities {
+    
     .rounded-s-4xl {
         border-start-start-radius: 4rem;
         border-end-start-radius: 4rem;

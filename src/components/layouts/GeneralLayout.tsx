@@ -11,7 +11,7 @@ export const GeneralLayout = ({ children, title, anchor = 'large', }: TGeneralLa
     <div>
       <Navbar />
 
-      <div className="py-9 px-28">
+      <div className="py-7 px-28">
 
         {title ? <Title text={title} /> : ''}
 

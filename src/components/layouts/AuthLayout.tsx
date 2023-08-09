@@ -29,13 +29,10 @@ export const AuthLayout = ({ image, children }: TAuthLayout) => {
             <Grid 
                 xs={5} 
                 padding={7} 
-                className='bg-white rounded-s-4xl'
+                className='bg-white rounded-s-4xl flex flex-col justify-around'
                 id="auth-vector-style"
             >
-                <Box 
-                    className='flex items-end justify-start m-auto mb-16'
-                    style={{height:'22vh'}} 
-                >
+                <Box>
                     <img 
                         alt="companyLogo"
                         src={companyLogo}

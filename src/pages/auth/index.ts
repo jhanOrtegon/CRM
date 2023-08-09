@@ -1,2 +1,2 @@
-export * from './login/LoginPage'
+export * from './login'
 export * from './passwordRecovery/PasswordRecoveryPage'

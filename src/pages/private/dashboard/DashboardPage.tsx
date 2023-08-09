@@ -15,11 +15,11 @@ export const DashboardPage = () => {
     return (
         <GeneralLayout title="Dashboard">
             <>
-                <Grid container spacing={2} sx={{ height: '45vh' }}>
+                <Grid container spacing={2}>
 
                     <Grid xs={8}>
-                        <Card cardClass={'bg-white h-full'}>
-                            <div className="flex gap-2 items-center justify-between">
+                        <Card cardClass={'bg-white'} className="vh-43 sm:py-3 2xl:py-8">
+                            <div className="flex gap-2 items-center justify-between sm:mb-4 2xl:mb-0">
                                 <div className="flex gap-2 items-center">
                                     <div className="text-base -text--daisy-navy-blue-60 font-bold">Total reportes</div>
                                     <IconAlertCircle className="-text--daisy-grey-50 h-8" />
@@ -45,12 +45,12 @@ export const DashboardPage = () => {
                     </Grid>
 
                     <Grid xs={4}>
-                        <Card cardClass={'bg-white h-full'} className="gap-3">
+                        <Card cardClass={'bg-white'} className="overflow-y-auto vh-43 justify-between gap-1 sm:text-sm sm:py-3 sm:px-6 2xl:p-8 2xl:text-base">
                             <div className="flex gap-2 items-center justify-between">
 
                                 <div className="flex gap-2 items-center">
                                     <div className="text-base -text--daisy-navy-blue-60 font-bold">Riesgos</div>
-                                    <IconAlertCircle className="-text--daisy-grey-50 h-8" />
+                                    <IconAlertCircle className="-text--daisy-grey-50 h-5" />
                                 </div>
 
                                 <div className="flex gap-2 items-center">
@@ -59,6 +59,20 @@ export const DashboardPage = () => {
                                 </div>
                             </div>
 
+                            <Grid container className='items-center'>
+                                <Grid xs={8}>
+                                    <div className="-text--daisy-navy-blue-40">Alta</div>
+                                    <div className="-text--daisy-navy-blue-100 font-bold">10 riesgos</div>
+                                </Grid>
+
+                                <Grid xs={4} className='flex gap-2 ml-auto text-sm items-center justify-end'>
+                                    <IconCaretDownFilled className="-text--daisy-caribbean-green" />
+                                    <div className="-text--daisy-navy-blue-100 font-medium">4,26%</div>
+                                </Grid>
+
+                                <Divider />
+                            </Grid>
+                            
                             <Grid container className='items-center'>
                                 <Grid xs={8}>
                                     <div className="-text--daisy-navy-blue-40">Alta</div>
@@ -120,10 +134,10 @@ export const DashboardPage = () => {
                 </Grid>
 
 
-                <Grid container spacing={2} mt={1} sx={{ height: '30vh' }}>
+                <Grid container spacing={2} mt={1}>
 
                     <Grid xs={6}>
-                        <Card className="flex items-center justify-center" cardClass={'bg-white h-full'}>
+                        <Card className="flex items-center justify-center vh-30" cardClass={'bg-white'}>
 
                             <div className="flex gap-4 justify-center items-center">
                                 <div style={{ width: "35%" }}>
@@ -159,7 +173,8 @@ export const DashboardPage = () => {
                     </Grid>
 
                     <Grid xs={6}>
-                        <Card cardClass={'bg-white h-full'}>
+
+                        <Card cardClass={'bg-white'} className="vh-30 sm:py-2 2xl:py-8 ">
                             <div className="font-semibold -text--daisy-navy-blue-60 text-center mt-3 mb-5">Riesgos con tratamiento</div>
 
                             <div className="flex gap-3 mb-2 text-sm text-end">
@@ -183,6 +198,7 @@ export const DashboardPage = () => {
                             </div>
 
                         </Card>
+
                     </Grid>
 
                 </Grid>
