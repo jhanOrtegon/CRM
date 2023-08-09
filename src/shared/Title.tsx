@@ -1,5 +1,5 @@
-export const Title = ({text, className}:{text:string, className?:string}) => {
+export const Title = ({text, className, mb='mb-5'}:{text:string, className?:string, mb?: string}) => {
   return (
-    <div className={`text-4xl text-daisy-space-100 font-bold mb-5 ${className}`}>{text}</div>
+    <div className={`${className} text-4xl text-daisy-space-100 font-bold ${mb}`}>{text}</div>
   )
 }

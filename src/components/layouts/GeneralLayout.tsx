@@ -6,16 +6,16 @@ type TGeneralLayout = {
   anchor?: 'medium' | 'small' | 'large',
 }
 
-export const GeneralLayout = ({ children, title, anchor = 'large', }: TGeneralLayout) => {
+export const GeneralLayout = ({ children, title, anchor = 'large'}: TGeneralLayout) => {
   return (
     <div>
       <Navbar />
 
-      <div className="py-7 px-28">
+      <div className="sm:py-5 2xl:pt-12 2xl:pb-5 px-28">
 
-        {title ? <Title text={title} /> : ''}
+        {title ? <Title text={title} className="mb-4" mb={'mb-2'} /> : ''}
 
-        <div className={`mt-7 ${anchor === 'large' ? 'w-full' : anchor === 'medium' ? 'w-8/12' : 'w-4/12'}`}>
+        <div className={`mt-2 ${anchor === 'large' ? 'w-full' : anchor === 'medium' ? 'w-8/12' : 'w-4/12'}`}>
           {children}
         </div>
       </div>

@@ -56,13 +56,13 @@ export const ServicesPage = () => {
 
       <SimpleTable
         TableHeadRow={(
-          <TableRow className="bg-daisy-space-100 text-white">
-            <TableCell className="text-white" align="center">Código</TableCell>
-            <TableCell className="text-white" align="left">Servicio</TableCell>
-            <TableCell className="text-white" align="center">Tipo</TableCell>
-            <TableCell className="text-white" align="left">Descripción</TableCell>
-            <TableCell className="text-white" align="right">Precio</TableCell>
-            <TableCell className="text-white" align="center">Estado</TableCell>
+          <TableRow className="bg-daisy-space-100 text-white p-2">
+            <TableCell className="text-white p-2" align="center">Código</TableCell>
+            <TableCell className="text-white p-2" align="left">Servicio</TableCell>
+            <TableCell className="text-white p-2" align="center">Tipo</TableCell>
+            <TableCell className="text-white p-2" align="left">Descripción</TableCell>
+            <TableCell className="text-white p-2" align="right">Precio</TableCell>
+            <TableCell className="text-white p-2" align="center">Estado</TableCell>
           </TableRow>
         )}
 
@@ -71,14 +71,14 @@ export const ServicesPage = () => {
             <TableRow
               key={nanoid()}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              className="hover:bg-daisy-space-10"
+              className="hover:bg-daisy-space-10 p-2"
             >
-              <TableCell className="text-daisy-space-40" align="center">{row.code}</TableCell>
-              <TableCell className="text-daisy-space-40" align="left">{row.service}</TableCell>
-              <TableCell className="text-daisy-space-40" align="center">{row.type}</TableCell>
-              <TableCell className="text-daisy-space-40" align="left">{row.description}</TableCell>
-              <TableCell className="text-daisy-space-40" align="right">{row.price}</TableCell>
-              <TableCell className="text-daisy-space-40" align="center">
+              <TableCell className="text-daisy-space-40 p-2" align="center">{row.code}</TableCell>
+              <TableCell className="text-daisy-space-40 p-2" align="left">{row.service}</TableCell>
+              <TableCell className="text-daisy-space-40 p-2" align="center">{row.type}</TableCell>
+              <TableCell className="text-daisy-space-40 p-2" align="left">{row.description}</TableCell>
+              <TableCell className="text-daisy-space-40 p-2" align="right">{row.price}</TableCell>
+              <TableCell className="text-daisy-space-40 p-2" align="center">
                 <CardState text={row.state ? 'Habilitado' : 'Inhabilitado'} type={row.state ? 'success' : 'error'} />
               </TableCell>
             </TableRow>

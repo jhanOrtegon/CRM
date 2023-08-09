@@ -4,6 +4,6 @@ type THeaderLayout = {
 
 export const HeaderLayout = ({ children }: THeaderLayout) => {
   return (
-    <div className="mb-5">{children}</div>
+    <div className="mt-3 mb-4">{children}</div>
   )
 }

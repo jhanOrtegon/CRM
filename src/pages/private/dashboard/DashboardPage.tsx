@@ -18,8 +18,8 @@ export const DashboardPage = () => {
                 <Grid container spacing={2}>
 
                     <Grid xs={8}>
-                        <Card cardClass={'bg-white'} className="vh-43 sm:py-3 2xl:py-8">
-                            <div className="flex gap-2 items-center justify-between sm:mb-4 2xl:mb-0">
+                        <Card cardClass={'bg-white'} className="vh-44 sm:py-3 2xl:py-8">
+                            <div className="flex gap-2 items-center justify-between">
                                 <div className="flex gap-2 items-center">
                                     <div className="text-base -text--daisy-navy-blue-60 font-bold">Total reportes</div>
                                     <IconAlertCircle className="-text--daisy-grey-50 h-8" />
@@ -45,7 +45,7 @@ export const DashboardPage = () => {
                     </Grid>
 
                     <Grid xs={4}>
-                        <Card cardClass={'bg-white'} className="overflow-y-auto vh-43 justify-between gap-1 sm:text-sm sm:py-3 sm:px-6 2xl:p-8 2xl:text-base">
+                        <Card cardClass={'bg-white'} className="overflow-y-auto vh-44 justify-between gap-1 sm:text-sm sm:py-3 sm:px-6 2xl:p-8 2xl:text-base">
                             <div className="flex gap-2 items-center justify-between">
 
                                 <div className="flex gap-2 items-center">
