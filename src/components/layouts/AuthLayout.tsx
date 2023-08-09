@@ -29,7 +29,7 @@ export const AuthLayout = ({ image, children }: TAuthLayout) => {
             <Grid 
                 xs={5} 
                 padding={5} 
-                className='bg-white rounded-s-4xl flex flex-col justify-center gap-16'
+                className='bg-white rounded-s-4xl flex flex-col justify-center gap-10'
                 id="auth-vector-style"
             >
                 <Box>
