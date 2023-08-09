@@ -15,7 +15,7 @@ export const GeneralLayout = ({ children, title, anchor = 'large'}: TGeneralLayo
 
         {title ? <Title text={title} className="mb-4" mb={'mb-2'} /> : ''}
 
-        <div className={`mt-2 ${anchor === 'large' ? 'w-full' : anchor === 'medium' ? 'w-8/12' : 'w-4/12'}`}>
+        <div className={`mt-2 ${anchor === 'large' ? 'w-full' : anchor === 'medium' ? 'w-8/12' : 'w-5/12'}`}>
           {children}
         </div>
       </div>

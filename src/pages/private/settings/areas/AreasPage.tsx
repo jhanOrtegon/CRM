@@ -1,6 +1,6 @@
 import { GeneralLayout, HeaderLayout } from "@/components/layouts"
-import { Button, CardState, NewDrawer, Search, SimpleTable, Textarea } from "@/shared"
-import { TableCell, TableRow, TextField } from "@mui/material"
+import { Button, CardState, InputText, NewDrawer, Search, SimpleTable, Textarea } from "@/shared"
+import { TableCell, TableRow } from "@mui/material"
 import { nanoid } from "nanoid"
 import { useState } from 'react';
 import { fireSuccessAlert } from "@/components";
@@ -35,7 +35,7 @@ export const AreasPage = () => {
   ];
 
   return (
-    <GeneralLayout title="Áreas" anchor="medium">
+    <GeneralLayout title="Áreas" anchor="small">
 
       <HeaderLayout>
         <div className="grid gap-5 grid-cols-new-2 items-center">
@@ -45,7 +45,6 @@ export const AreasPage = () => {
       </HeaderLayout>
 
       <SimpleTable
-        anchor="small"
 
         TableHeadRow={(
           <TableRow className="bg-daisy-space-100 text-white">
@@ -86,14 +85,10 @@ export const AreasPage = () => {
         }}
       >
 
-        <TextField
+        <InputText
           required
-          fullWidth
-          size="small"
-          id={nanoid()}
           label="Nombre área"
           color="secondary"
-          sx={{ mb: 2 }}
         />
 
         <Textarea placeholder="Descripción"/>

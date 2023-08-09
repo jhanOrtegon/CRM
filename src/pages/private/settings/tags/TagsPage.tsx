@@ -1,5 +1,5 @@
 import { GeneralLayout, HeaderLayout } from "@/components/layouts"
-import { Button, CardState, NewDrawer, Search, SelectSingle, SimpleTable } from "@/shared"
+import { Button, CardState, InputText, NewDrawer, Search, SelectSingle, SimpleTable } from "@/shared"
 import { TableCell, TableRow, TextField } from "@mui/material"
 import { nanoid } from "nanoid"
 import { useState } from 'react';
@@ -36,7 +36,7 @@ export const TagsPage = () => {
   ];
 
   return (
-    <GeneralLayout title="Etiquetas" anchor="medium">
+    <GeneralLayout title="Etiquetas" anchor="small">
 
       <HeaderLayout>
         <div className="grid gap-5 grid-cols-new-2 items-center">
@@ -46,7 +46,6 @@ export const TagsPage = () => {
       </HeaderLayout>
 
       <SimpleTable
-        anchor="small"
 
         TableHeadRow={(
           <TableRow className="bg-daisy-space-100 text-white">
@@ -65,7 +64,7 @@ export const TagsPage = () => {
               className="hover:bg-daisy-space-10"
             >
               <TableCell className="text-daisy-space-40" align="center">
-                <div className={`${row.color === 'blue' ? '-bg--daisy-blue-jeans-100' : '-bg--daisy-yellow-100'} m-auto h-6 w-6 rounded-md flex justify-center`} />
+                <div className={`${row.color === 'blue' ? '-bg--daisy-blue-jeans-100' : '-bg--daisy-yellow-100'} m-auto h-5 w-5 rounded-md flex justify-center`} />
               </TableCell>
               <TableCell className="text-daisy-space-40" align="left">{row.tags}</TableCell>
               <TableCell className="text-daisy-space-40" align="center">{row.contacts}</TableCell>
@@ -91,15 +90,10 @@ export const TagsPage = () => {
         }}
       >
 
-
-        <TextField
+        <InputText
           required
-          fullWidth
-          size="small"
-          id={nanoid()}
           label="Nombre etiqueta"
           color="secondary"
-          sx={{ mb: 2 }}
         />
 
         <SelectSingle inputLabel="Color etiqueta" value={''} color="secondary" />

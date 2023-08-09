@@ -2,24 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4377EB;
+    border-radius: 300px !important;
+    border: 6px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4377EB;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: gray;
+    border-radius: 10px !important;
+}
+
+/* table td, table th {
+    padding: 6px 16px !important;
+} */
+
 .shadow-none-focus:focus {
     box-shadow: none !important;
 }
 
-.btn{
+.btn {
     text-transform: math-auto;
 }
 
-.vh-44{
+.vh-44 {
     height: 44vh;
 }
 
-.vh-30{
+.vh-30 {
     height: 30vh;
 }
 
+.vh-27 {
+    height: 27vh;
+}
+
 @layer utilities {
-    
+
     .rounded-s-4xl {
         border-start-start-radius: 4rem;
         border-end-start-radius: 4rem;

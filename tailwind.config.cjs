@@ -8,7 +8,7 @@ module.exports = {
       gridTemplateColumns: {
         // added new 4 column grid as new4
         'new-1': '1fr',
-        'new-2': '3fr 1fr',
+        'new-2': '2fr 1fr',
         'new-3': '1fr 4fr 1fr',
         'new-4': '1fr 1fr 3fr 1fr',
         'new-1x2': '1fr 1fr',

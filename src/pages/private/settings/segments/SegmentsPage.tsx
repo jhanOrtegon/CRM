@@ -1,7 +1,6 @@
 import { fireSuccessAlert } from "@/components";
 import { GeneralLayout, HeaderLayout } from "@/components/layouts"
-import { Button, CardState, Search, SelectSingle, SimpleTable, NewModal } from "@/shared"
-import { TextField } from "@mui/material";
+import { Button, CardState, Search, SelectSingle, SimpleTable, NewModal, InputText } from "@/shared"
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import { nanoid } from "nanoid";
@@ -92,20 +91,14 @@ export const SegmentsPage = () => {
           <div className="font-semibold mb-2">Segmentos</div>
 
           <div className="flex gap-3">
-            <TextField
+            <InputText
               required
-              fullWidth
-              size="small"
-              id={nanoid()}
               label="Nombre"
               color="secondary"
             />
 
-            <TextField
+            <InputText
               required
-              fullWidth
-              size="small"
-              id={nanoid()}
               label="Descripción"
               color="secondary"
             />
@@ -119,11 +112,8 @@ export const SegmentsPage = () => {
             <SelectSingle inputLabel="Filtro" value={''} color="secondary"/>
             <SelectSingle inputLabel="Variable" value={''} color="secondary"/>
 
-            <TextField
+            <InputText
               required
-              fullWidth
-              size="small"
-              id={nanoid()}
               label="Valor"
               color="secondary"
             />

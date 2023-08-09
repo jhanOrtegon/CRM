@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 //components
 import { AuthLayout } from "@/components/layouts"
-import { Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material"
+import { Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from "@mui/material"
 
 //icons
 import { IconEyeClosed, IconEyeCheck, IconCircle1Filled, IconSquareRoundedX } from '@tabler/icons-react';
@@ -12,9 +12,14 @@ import { IconEyeClosed, IconEyeCheck, IconCircle1Filled, IconSquareRoundedX } fr
 import bgLogin from '@/assets/images/auth/bgLogin.png'
 import avatarMen from '@/assets/images/avatars/avatarMen.png'
 import avatarWoMen from '@/assets/images/avatars/avatarWoMen.png'
+import { InputText } from "@/shared";
+import { useScreenSize } from "@/hooks";
+import { breakPoints } from "@/utils";
 
 
 export const LoginPage = () => {
+
+    const { width } = useScreenSize()
 
     const navigate = useNavigate()
 
@@ -34,13 +39,11 @@ export const LoginPage = () => {
         <AuthLayout image={bgLogin}>
             <div className="flex flex-col justify-center">
                 <div>
-                    <TextField
+                    <InputText
                         required
-                        id="outlined-required"
+                        fullWidth
                         label="Usuario o correo electrónico"
                         defaultValue="jhan@ttn.com"
-                        fullWidth
-                        sx={{ mb: 4 }}
                     />
 
                     <FormControl
@@ -50,6 +53,7 @@ export const LoginPage = () => {
                     >
                         <InputLabel required htmlFor="outlined-adornment-password">Contraseña</InputLabel>
                         <OutlinedInput
+                            size={width >= breakPoints.lg ? 'medium' : 'small'}
                             required
                             defaultValue="123456"
                             label="Contraseña "
@@ -72,7 +76,7 @@ export const LoginPage = () => {
 
                     <div className="form-control inline-flex">
                         <label className="label cursor-pointer justify-start gap-3">
-                            <input type="checkbox" className="checkbox checkbox-accent" />
+                            <input type="checkbox" defaultChecked className="checkbox checkbox-accent checkbox-xs rounded-sm "/>
                             <span className="label-text">Recuerdame</span>
                         </label>
                     </div>
@@ -82,9 +86,9 @@ export const LoginPage = () => {
                     <Button
                         color="secondary"
                         sx={{ marginTop: '2rem' }}
-                        className='w-9/12 m-auto self-center'
+                        className='w-8/12 m-auto self-center'
                         variant="contained"
-                        size="large"
+                        size={width >= breakPoints.lg ? 'large' : 'medium'}
                         onClick={handleLogin}
                     >
                         Iniciar Sesión
@@ -102,7 +106,7 @@ export const LoginPage = () => {
                 <div>
                     <div className="divider text-daisy-space-60 text-xs mb-4">Inicia sesión como</div>
 
-                    <div className="gap-3 grid grid-cols-2 justify-center mt-7">
+                    <div className="gap-5 grid grid-cols-2 justify-center mt-7">
 
                         <div
                             onClick={handleLogin}

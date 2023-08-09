@@ -1,15 +1,20 @@
+import { useScreenSize } from "@/hooks";
+import { breakPoints } from "@/utils";
 import { ResizableBox as ReactResizableBox } from "react-resizable";
 
 import "react-resizable/css/styles.css";
 
 export default function ResizableBox({
   children,
-  width = 700,
-  height = 230,
+  width = 680,
+  height = 210,
   resizable = true,
   style = {},
   className = "",
 }) {
+
+  const { width: newWidth, height:newHeight } = useScreenSize()
+
   return (
     <div>
       <div
@@ -22,7 +27,10 @@ export default function ResizableBox({
         }}
       >
         {resizable ? (
-          <ReactResizableBox width={width} height={height}>
+          <ReactResizableBox
+            width={newWidth >= breakPoints.lg ? 800 : width}
+            height={newHeight >= 700 ? 300 : height}
+          >
             <div
               style={{
                 width: "100%",

@@ -8,7 +8,7 @@ type TNewDiv = {
 
 export const NewDiv = ({anchor='medium', children, style}:TNewDiv) => {
   return (
-    <div style={style} className={`${anchor === 'large' ? 'vw-70' : anchor === 'medium' ? 'vw-40' : 'vw-30'}`}>
+    <div style={style} className={`${anchor === 'large' ? 'w-4/4' : anchor === 'medium' ? 'w-4/4' : 'w-4/4'}`}>
         {children}
     </div>
   )

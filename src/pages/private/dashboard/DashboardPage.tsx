@@ -7,7 +7,7 @@ import Grid from "@mui/material/Unstable_Grid2"
 import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 
 // icons
-import { IconAlertCircle, IconCaretDownFilled, IconCaretUpFilled, IconMinus,IconCalendarDue  } from '@tabler/icons-react';
+import { IconAlertCircle, IconCaretDownFilled, IconCaretUpFilled, IconMinus, IconCalendarDue } from '@tabler/icons-react';
 import Line from "@/components/Line";
 
 
@@ -33,7 +33,7 @@ export const DashboardPage = () => {
 
                                     <div className="flex gap-2 items-center rounded-md border px-2 py-1 text-sm cursor-pointer">
                                         <div className="-text--daisy-navy-blue-100 font-bold">2023</div>
-                                        <IconCalendarDue className="text-warning" size={16}/>
+                                        <IconCalendarDue className="text-warning" size={16} />
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@ export const DashboardPage = () => {
 
                                 <Divider />
                             </Grid>
-                            
+
                             <Grid container className='items-center'>
                                 <Grid xs={8}>
                                     <div className="-text--daisy-navy-blue-40">Alta</div>
@@ -137,19 +137,20 @@ export const DashboardPage = () => {
                 <Grid container spacing={2} mt={1}>
 
                     <Grid xs={6}>
-                        <Card className="flex items-center justify-center vh-30" cardClass={'bg-white'}>
+                        <Card className="flex items-center justify-center vh-27" cardClass={'bg-white'}>
 
                             <div className="flex gap-4 justify-center items-center">
-                                <div style={{ width: "35%" }}>
+                                <div style={{ width: "30%" }}>
                                     <CircularProgressbarWithChildren
+                                        circleRatio={5}
                                         value={50}
                                         strokeWidth={8}
                                         styles={buildStyles({
                                             pathColor: "#4377EB",
-                                            trailColor: "#B4C9F7"
+                                            trailColor: "#B4C9F7",
                                         })}
                                     >
-                                        <Title text="50%" className="mb-0" />
+                                        <Title text="50%" mb="mb-0" />
                                         <div className="-text--daisy-navy-blue-40 font-semibold text-base">Eficiencia</div>
                                     </CircularProgressbarWithChildren>
                                 </div>
@@ -174,27 +175,27 @@ export const DashboardPage = () => {
 
                     <Grid xs={6}>
 
-                        <Card cardClass={'bg-white'} className="vh-30 sm:py-2 2xl:py-8 ">
-                            <div className="font-semibold -text--daisy-navy-blue-60 text-center mt-3 mb-5">Riesgos con tratamiento</div>
+                        <Card cardClass={'bg-white'} className="vh-27 sm:py-2 2xl:py-8 ">
+                            <div className="font-semibold -text--daisy-navy-blue-60 text-center mt-3 sm:mb-1 2xl:mb-5">Riesgos con tratamiento</div>
 
-                            <div className="flex gap-3 mb-2 text-sm text-end">
+                            <div className="flex gap-3 2xl:mb-2 text-sm text-end">
                                 <div className="-text--daisy-navy-blue-60 w-20">Alto</div>
-                                <progress className="progress progress-warning -bg--daisy-royal-blue-10 h-4" value="15" max="100"></progress>
+                                <progress className="progress progress-warning -bg--daisy-royal-blue-10 sm:h-3 2xl:h-4" value="15" max="100"></progress>
                             </div>
 
-                            <div className="flex gap-3 mb-2 text-sm text-end">
+                            <div className="flex gap-3 2xl:mb-2 text-sm text-end">
                                 <div className="-text--daisy-navy-blue-60 w-20">Media</div>
-                                <progress className="progress progress-warning -bg--daisy-royal-blue-10 h-4" value="50" max="100"></progress>
+                                <progress className="progress progress-warning -bg--daisy-royal-blue-10 sm:h-3 2xl:h-4" value="50" max="100"></progress>
                             </div>
 
-                            <div className="flex gap-3 mb-2 text-sm text-end">
+                            <div className="flex gap-3 2xl:mb-2 text-sm text-end">
                                 <div className="-text--daisy-navy-blue-60 w-20">Baja</div>
-                                <progress className="progress progress-warning -bg--daisy-royal-blue-10 h-4" value="30" max="100"></progress>
+                                <progress className="progress progress-warning -bg--daisy-royal-blue-10 sm:h-3 2xl:h-4" value="30" max="100"></progress>
                             </div>
 
-                            <div className="flex gap-3 mb-2 text-sm text-end">
+                            <div className="flex gap-3 2xl:mb-2 text-sm text-end">
                                 <div className="-text--daisy-navy-blue-60 w-20">Muy baja</div>
-                                <progress className="progress progress-warning -bg--daisy-royal-blue-10 h-4" value="30" max="100"></progress>
+                                <progress className="progress progress-warning -bg--daisy-royal-blue-10 sm:h-3 2xl:h-4" value="30" max="100"></progress>
                             </div>
 
                         </Card>

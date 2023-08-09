@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 //components
 import { fireWarningAlert } from "@/components"
 import { AuthLayout } from "@/components/layouts"
-import { Button, TextField } from "@mui/material"
+import { Button } from "@mui/material"
 
 // images
 import bgLogin from '@/assets/images/auth/bgLogin.png'
@@ -15,6 +15,7 @@ import { IconCircleCheckFilled } from '@tabler/icons-react';
 
 //utils
 import { isValidEmail } from "@/utils";
+import { InputText } from "@/shared";
 
 export const PasswordRecoveryPage = () => {
 
@@ -76,12 +77,9 @@ export const PasswordRecoveryPage = () => {
                             </div>
 
                             <div>
-                                <TextField
-                                    fullWidth
+                                <InputText
                                     required
-                                    sx={{ mb: 1 }}
                                     label="Correo electrónico"
-                                    id="outlined-required-email"
                                     onChange={({ target }) => setEmail(target.value)}
                                 />
 
