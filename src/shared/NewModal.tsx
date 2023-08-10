@@ -6,11 +6,12 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 
 type TModal = {
+    open: boolean,
+    title?: 'Crear',
+    size?: 'small' | 'medium' | 'large',
+    children: ReactNode,
     onClickCancel?: () => void,
     onClickSave?: () => void,
-    children: ReactNode,
-    open: boolean,
-    size?: 'small' | 'medium' | 'large'
 }
 
 const style = {
@@ -23,7 +24,7 @@ const style = {
     p: 4,
 };
 
-export const NewModal = ({ onClickCancel, onClickSave, open, children, size = 'medium' }: TModal) => {
+export const NewModal = ({ onClickCancel, onClickSave, open, children, size = 'medium', title='Crear' }: TModal) => {
 
     return (
         <div>
@@ -44,7 +45,9 @@ export const NewModal = ({ onClickCancel, onClickSave, open, children, size = 'm
                 <Fade in={open}>
                     <Box
                         sx={style}
-                        className={`${size === 'large' ? 'w-10/12' : size === 'medium' ? 'w-6/12' : 'w-4/12'} max-w-5xl focus-visible:outline-none rounded-2xl text-daisy-space-100`}>
+                        className={`${size === 'large' ? 'w-10/12' : size === 'medium' ? 'w-6/12' : 'w-4/12'} max-w-5xl focus-visible:outline-none rounded-2xl text-daisy-space-100`}
+                    >
+                        {title && <div className="font-bold text-2xl mb-4">{title}</div>}
 
                         <div>
                             {children}

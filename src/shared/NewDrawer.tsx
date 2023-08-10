@@ -31,14 +31,14 @@ export const NewDrawer = ({
         >
             <NewDiv
                 anchor={anchorDrawer}
-                style={{ height: '100vh', padding: '100px 50px 50px 50px', display: 'flex', flexDirection: 'column' }}
+                style={{ height: '100vh', padding: '70px 50px 50px 50px', display: 'flex', flexDirection: 'column' }}
             >
                 <Box sx={{ position: 'absolute', top: 15, left: 30 }}>
                     <IconX className="text-gray-400 hover:text-daisy-space-80 cursor-pointer" onClick={onClickCancel} />
                 </Box>
 
                 {isAction ? (
-                    <div className="mb-10">
+                    <div className="mb-8">
                         <div className="font-bold text-daisy-space-100 text-3xl">{nameAction}</div>
                         <div className="font-bold text-daisy-space-100 text-base">{title}</div>
                     </div>

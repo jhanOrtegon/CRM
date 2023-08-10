@@ -1,5 +1,5 @@
 import { GeneralLayout, HeaderLayout } from "@/components/layouts"
-import { Button, CardState, InputText, NewDrawer, Search, SelectSingle, SimpleTable } from "@/shared"
+import { Button, CardState, NewInput, NewDrawer, Search, SimpleTable } from "@/shared"
 import { TableCell, TableRow } from "@mui/material"
 import { nanoid } from "nanoid"
 import { useState } from 'react';
@@ -90,13 +90,19 @@ export const TagsPage = () => {
         }}
       >
 
-        <InputText
+        <NewInput
           required
+          sx={{mb:3}}
           label="Nombre etiqueta"
           color="secondary"
         />
-
-        <SelectSingle inputLabel="Color etiqueta" value={''} color="secondary" />
+        
+        <NewInput
+          required
+          type="color"
+          label="Color etiqueta"
+          color="secondary"
+        />
 
 
       </NewDrawer>

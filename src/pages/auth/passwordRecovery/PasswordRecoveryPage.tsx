@@ -15,7 +15,7 @@ import { IconCircleCheckFilled } from '@tabler/icons-react';
 
 //utils
 import { isValidEmail } from "@/utils";
-import { InputText } from "@/shared";
+import { NewInput } from "@/shared";
 
 export const PasswordRecoveryPage = () => {
 
@@ -77,9 +77,10 @@ export const PasswordRecoveryPage = () => {
                             </div>
 
                             <div>
-                                <InputText
+                                <NewInput
                                     required
                                     label="Correo electrónico"
+                                    sx={{mb:2}}
                                     onChange={({ target }) => setEmail(target.value)}
                                 />
 

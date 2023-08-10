@@ -12,7 +12,7 @@ import { IconEyeClosed, IconEyeCheck, IconCircle1Filled, IconSquareRoundedX } fr
 import bgLogin from '@/assets/images/auth/bgLogin.png'
 import avatarMen from '@/assets/images/avatars/avatarMen.png'
 import avatarWoMen from '@/assets/images/avatars/avatarWoMen.png'
-import { InputText } from "@/shared";
+import { NewInput } from "@/shared";
 import { useScreenSize } from "@/hooks";
 import { breakPoints } from "@/utils";
 
@@ -39,9 +39,10 @@ export const LoginPage = () => {
         <AuthLayout image={bgLogin}>
             <div className="flex flex-col justify-center">
                 <div>
-                    <InputText
+                    <NewInput
                         required
                         fullWidth
+                        sx={{mb:4}}
                         label="Usuario o correo electrónico"
                         defaultValue="jhan@ttn.com"
                     />

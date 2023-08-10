@@ -1,0 +1,1 @@
+export type TMethods = 'CREATE' | 'UPDATE' | 'READ' | 'DELETE'

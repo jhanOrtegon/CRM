@@ -3,6 +3,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectProps } from '@mui/material/Select';
 import { nanoid } from 'nanoid'
+import { useScreenSize } from '@/hooks';
+import { breakPoints } from '@/utils';
 
 interface ISelectSingle extends SelectProps {
   inputLabel: string,
@@ -11,6 +13,7 @@ interface ISelectSingle extends SelectProps {
 export const SelectSingle = ({ inputLabel, id, value, onChange, color }: ISelectSingle) => {
 
   const unique = nanoid()
+  const { width } = useScreenSize()
 
   // const [age, setAge] = React.useState('');
 
@@ -19,7 +22,10 @@ export const SelectSingle = ({ inputLabel, id, value, onChange, color }: ISelect
   // };
 
   return (
-    <FormControl sx={{ m: 0, width: '100%', p: 0 }} size="small">
+    <FormControl 
+      sx={{ m: 0, width: '100%', p: 0 }} 
+      size={width >= breakPoints.lg ? 'medium' : 'small'}
+    >
       <InputLabel id={`select-label-${unique}`}>{inputLabel}</InputLabel>
       <Select
         labelId={`select-label-${unique}`}

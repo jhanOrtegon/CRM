@@ -14,6 +14,8 @@ module.exports = {
         'new-1x2': '1fr 1fr',
         'new-1x3': '1fr 1fr 1fr',
         'new-1x4': '1fr 1fr 1fr 1fr',
+        'new-1x5': '1fr 1fr 1fr 1fr 1fr',
+        'new-1-4': '1fr 4fr',
       },
       colors:
       {

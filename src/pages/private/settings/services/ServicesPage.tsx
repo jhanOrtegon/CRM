@@ -1,6 +1,6 @@
 import { fireSuccessAlert } from "@/components";
 import { GeneralLayout, HeaderLayout } from "@/components/layouts"
-import { Button, CardState, InputText, NewDrawer, Search, SelectSingle, SimpleTable, Textarea } from "@/shared"
+import { Button, CardState, NewInput, NewDrawer, Search, SelectSingle, SimpleTable, Textarea } from "@/shared"
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import { nanoid } from "nanoid";
@@ -99,7 +99,7 @@ export const ServicesPage = () => {
         }}
       >
 
-        <InputText
+        <NewInput
           required
           fullWidth
           size="small"
@@ -109,30 +109,34 @@ export const ServicesPage = () => {
           sx={{ mb: 2 }}
         />
 
-        <InputText
+        <NewInput
           required
           label="Nombre servicio"
           color="secondary"
+          sx={{ mb: 2 }}
         />
 
-        <InputText
+        <NewInput
           required
           label="Tipo"
           color="secondary"
+          sx={{ mb: 2 }}
         />
 
-        <InputText
+        <NewInput
           label="Subtipo"
           color="secondary"
+          sx={{ mb: 2 }}
         />
 
-        <InputText
+        <NewInput
           required
           label="Precio"
           color="secondary"
+          sx={{ mb: 2 }}
         />
 
-        <Textarea placeholder="Descripción" />
+        <Textarea height="h-20" placeholder="Descripción" />
 
 
 

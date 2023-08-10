@@ -1,5 +1,5 @@
 import { GeneralLayout, HeaderLayout } from "@/components/layouts"
-import { Button, CardState, InputText, NewDrawer, Search, SimpleTable, Textarea } from "@/shared"
+import { Button, CardState, NewInput, NewDrawer, Search, SimpleTable, Textarea } from "@/shared"
 import { TableCell, TableRow } from "@mui/material"
 import { nanoid } from "nanoid"
 import { useState } from 'react';
@@ -85,10 +85,11 @@ export const AreasPage = () => {
         }}
       >
 
-        <InputText
+        <NewInput
           required
           label="Nombre área"
           color="secondary"
+          sx={{mb:2}}
         />
 
         <Textarea placeholder="Descripción"/>

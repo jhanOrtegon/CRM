@@ -1,6 +1,6 @@
 import { fireSuccessAlert } from "@/components";
 import { GeneralLayout, HeaderLayout } from "@/components/layouts"
-import { Button, CardState, Search, SelectSingle, SimpleTable, NewModal, InputText } from "@/shared"
+import { Button, CardState, Search, SelectSingle, SimpleTable, NewModal, NewInput } from "@/shared"
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import { nanoid } from "nanoid";
@@ -84,35 +84,36 @@ export const SegmentsPage = () => {
           fireSuccessAlert({ message: 'Mujeres madres de familia' })
         }}
       >
-        <div className="font-bold text-2xl">Crear</div>
+        
 
-        <div className="mt-2 mb-5">
-
-          <div className="font-semibold mb-2">Segmentos</div>
+        <div>
+          <div className="font-semibold">Segmentos</div>
 
           <div className="flex gap-3">
-            <InputText
+            <NewInput
               required
               label="Nombre"
               color="secondary"
+              margin="dense"
             />
 
-            <InputText
+            <NewInput
               required
               label="Descripción"
               color="secondary"
+              margin="dense"
             />
           </div>
         </div>
 
         <div>
-          <div className="font-semibold mb-2">Condiciones</div>
+          <div className="font-semibold mt-4 mb-2">Condiciones</div>
 
           <div className="flex gap-3">
             <SelectSingle inputLabel="Filtro" value={''} color="secondary"/>
             <SelectSingle inputLabel="Variable" value={''} color="secondary"/>
 
-            <InputText
+            <NewInput
               required
               label="Valor"
               color="secondary"
