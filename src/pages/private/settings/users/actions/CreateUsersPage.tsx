@@ -1,4 +1,5 @@
 //components
+import { fireSuccessAlert } from "@/components"
 import { GeneralLayout } from "@/components/layouts"
 
 //models
@@ -7,6 +8,17 @@ import { Card, FooterButton, NewInput, SelectSingle, Text } from "@/shared"
 
 
 export const CreateUsersPage = ({ onchangePage }: IGeneralsPropsPages) => {
+
+    const handleValidForm = () => {
+
+        fireSuccessAlert(
+          { message: 'Andrea Paola Contreras Gaviria' }
+        ).then(({ isConfirmed }) => {
+          if (isConfirmed) onchangePage('READ')
+        })
+    
+      }
+
     return (
         <GeneralLayout title="Crear usuario" goBack={() => onchangePage('READ')}>
 
@@ -62,7 +74,10 @@ export const CreateUsersPage = ({ onchangePage }: IGeneralsPropsPages) => {
                 </div>
             </div>
 
-            <FooterButton />
+            <FooterButton 
+                onClickSave={handleValidForm}
+                onClickCancel={()=>onchangePage('READ')}
+            />
 
         </GeneralLayout>
     )

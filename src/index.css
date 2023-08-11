@@ -11,14 +11,10 @@ input[data-autocompleted] {
     background-color: transparent !important;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #4377EB;
-    border-radius: 300px !important;
     border: 6px solid rgba(0, 0, 0, 0.2);
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #4377EB;
 }
@@ -29,12 +25,11 @@ input[data-autocompleted] {
 
 ::-webkit-scrollbar-track {
     background-color: gray;
-    border-radius: 10px !important;
 }
 
-/* table td, table th {
-    padding: 6px 16px !important;
-} */
+.font-extralight-100{
+    font-weight: 100;
+}
 
 .shadow-none-focus:focus {
     box-shadow: none !important;
@@ -46,6 +41,10 @@ input[data-autocompleted] {
 
 .vh-44 {
     height: 44vh;
+}
+
+.vh-65 {
+    height: 65vh;
 }
 
 .vh-30 {

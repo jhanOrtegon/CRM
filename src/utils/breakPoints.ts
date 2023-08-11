@@ -1,3 +1,4 @@
 export const breakPoints = {
-    lg: 1400
+    lg: 20000,
+    xl: 1400
 }

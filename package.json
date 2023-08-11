@@ -16,6 +16,7 @@
     "@tabler/icons-react": "^2.30.0",
     "@types/node": "^16.7.13",
     "@types/react-resizable": "^3.0.4",
+    "animate.css": "^4.1.1",
     "axios": "^1.4.0",
     "nanoid": "^4.0.2",
     "react": "^18.2.0",

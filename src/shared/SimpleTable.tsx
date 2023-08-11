@@ -20,7 +20,7 @@ export function SimpleTable({ TableHeadRow, TableBodyRow, anchor='large', size =
     return (
         <TableContainer component={Paper}>
             <Table
-                size={width >= breakPoints.lg ? 'medium' : size}
+                size={width >= breakPoints.xl ? 'medium' : size}
                 aria-label="simple table"
                 className={`${anchor === 'large' ? 'w-full' : anchor === 'medium' ? 'w-6/12' : 'w-4/12'} rounded-2xl`}
             >

@@ -81,7 +81,7 @@ export const AreasPage = () => {
         onClickCancel={onCloseDrawer}
         onClickSave={() => {
           onCloseDrawer()
-          fireSuccessAlert({ message: 'Donante' })
+          fireSuccessAlert({ message: 'Mercadeo' })
         }}
       >
 

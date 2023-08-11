@@ -12,7 +12,7 @@ import { IconEyeClosed, IconEyeCheck, IconCircle1Filled, IconSquareRoundedX } fr
 import bgLogin from '@/assets/images/auth/bgLogin.png'
 import avatarMen from '@/assets/images/avatars/avatarMen.png'
 import avatarWoMen from '@/assets/images/avatars/avatarWoMen.png'
-import { NewInput } from "@/shared";
+import { NewCheckBox, NewInput } from "@/shared";
 import { useScreenSize } from "@/hooks";
 import { breakPoints } from "@/utils";
 
@@ -77,7 +77,7 @@ export const LoginPage = () => {
 
                     <div className="form-control inline-flex">
                         <label className="label cursor-pointer justify-start gap-3">
-                            <input type="checkbox" defaultChecked className="checkbox checkbox-accent checkbox-xs rounded-sm "/>
+                            <NewCheckBox defaultChecked />
                             <span className="label-text">Recuerdame</span>
                         </label>
                     </div>

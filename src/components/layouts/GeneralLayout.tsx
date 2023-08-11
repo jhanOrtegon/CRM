@@ -17,7 +17,7 @@ export const GeneralLayout = ({ children, title, anchor = 'large', goBack}: TGen
     <div>
       <Navbar />
 
-      <div className="sm:py-5 2xl:pt-12 2xl:pb-5 px-28">
+      <div className="sm:py-5 2xl:pt-12 2xl:pb-5 px-28 animate__animated animate__fadeIn">
 
         <div className="flex gap-4 mb-4 items-center">
         {goBack 

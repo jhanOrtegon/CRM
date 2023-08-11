@@ -1,5 +1,16 @@
-export const Text = ({value, className, mb='mb-1'}:{value:string, className?:string, mb?: string}) => {
+type TText = {
+  value:string, 
+  className?:string, 
+  mb?: string,
+  color?: 'space' | 'blue-jean'
+}
+
+export const Text = ({value, className, mb='mb-1', color='space'}:TText) => {
     return (
-      <div className={`${className} text-base 2xl:text-xl text-daisy-space-100 font-semibold ${mb}`}>{value}</div>
+      <div 
+        className={`text-base 2xl:text-xl font-semibold ${mb} ${color === 'space' ? 'text-daisy-space-100' : '-text--daisy-blue-jeans-100'} ${className}`}
+      >
+          {value}
+        </div>
     )
   }

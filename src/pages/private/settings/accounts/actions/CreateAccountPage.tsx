@@ -1,4 +1,5 @@
 //components
+import { fireSuccessAlert } from "@/components";
 import { GeneralLayout } from "@/components/layouts"
 
 //models
@@ -15,6 +16,17 @@ import {
 
 
 export const CreateAccountPage = ({ onchangePage }: IGeneralsPropsPages) => {
+
+  const handleValidForm = () => {
+
+    fireSuccessAlert(
+      { message: 'Carlos Fernández de Castro' }
+    ).then(({ isConfirmed }) => {
+      if (isConfirmed) onchangePage('READ')
+    })
+
+  }
+
   return (
     <GeneralLayout title="Crear cuenta" goBack={() => onchangePage('READ')}>
 
@@ -89,7 +101,10 @@ export const CreateAccountPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
       </div>
 
-      <FooterButton/>
+      <FooterButton
+        onClickSave={handleValidForm}
+        onClickCancel={() => onchangePage('READ')}
+      />
 
     </GeneralLayout>
   )
