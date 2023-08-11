@@ -21,7 +21,7 @@ export const CardPlaces = ({ labelInput, children }: TCardPlaces) => {
                 />
 
                 <Button
-                    variant='primary'
+                    variant="hover-gray"
                     endIcon={<IconSquareRoundedPlusFilled color='text-white' width={20} height={20} />}
                 >
                     Agregar

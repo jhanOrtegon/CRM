@@ -7,8 +7,9 @@ interface TNewDrawer extends DrawerProps {
     onClickCancel?: () => void,
     onClickSave?: () => void,
     isAction?: boolean,
-    nameAction?: 'Crear',
-    title?:string
+    nameAction?: string,
+    title?: string,
+    footerHide?: boolean
 }
 
 export const NewDrawer = ({
@@ -21,6 +22,7 @@ export const NewDrawer = ({
     onClickSave,
     isAction = false,
     nameAction = 'Crear',
+    footerHide = false,
     title
 }: TNewDrawer) => {
     return (
@@ -31,7 +33,13 @@ export const NewDrawer = ({
         >
             <NewDiv
                 anchor={anchorDrawer}
-                style={{ height: '100vh', padding: '70px 50px 50px 50px', display: 'flex', flexDirection: 'column' }}
+                style={{
+                    height: '100vh',
+                    padding: '70px 50px 50px 50px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    width: anchorDrawer === 'medium' ? '400px' : anchorDrawer === 'large' ? '600px' : '300px'
+                }}
             >
                 <Box sx={{ position: 'absolute', top: 15, left: 30 }}>
                     <IconX className="text-gray-400 hover:text-daisy-space-80 cursor-pointer" onClick={onClickCancel} />
@@ -44,12 +52,18 @@ export const NewDrawer = ({
                     </div>
                 ) : ''}
 
-                {children}
+                <div className="overflow-y-auto">
+                    {children}
+                </div>
 
-                <Box className="grid grid-cols-new-1x2 gap-4 items-center justify-center mt-auto">
-                    <Button className='btn' onClick={onClickCancel} variant='transparent'>Cancelar</Button>
-                    <Button onClick={onClickSave} >Guardar</Button>
-                </Box>
+                {
+                    !footerHide ? (
+                        <Box className="grid grid-cols-new-1x2 gap-4 items-center justify-center mt-auto">
+                            <Button className='btn' onClick={onClickCancel} variant='transparent'>Cancelar</Button>
+                            <Button onClick={onClickSave} >Guardar</Button>
+                        </Box>
+                    ) : ''
+                }
             </NewDiv>
         </Drawer>
     )

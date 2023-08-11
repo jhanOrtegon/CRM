@@ -1,0 +1,1 @@
+export type TTableStates = 'success' | 'info' | 'error' | 'gray' | 'warning'
