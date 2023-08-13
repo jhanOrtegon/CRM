@@ -77,7 +77,7 @@ export const ReadUsersPage = ({ onchangePage }: IGeneralsPropsPages) => {
               <TableCell className="text-daisy-space-40" align="center">{row.area}</TableCell>
               <TableCell className="text-daisy-space-40" align="center">{row.email}</TableCell>
               <TableCell className="text-daisy-space-40" align="center">{row.contact}</TableCell>
-              <TableCell className="text-daisy-space-40" align="center">
+              <TableCell className="text-daisy-space-40" align="center" width={130}>
                 <CardState text={row.state ? 'Habilitado' : 'Inhabilitado'} type={row.state ? 'success' : 'error'} />
               </TableCell>
             </TableRow>

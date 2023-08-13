@@ -45,11 +45,11 @@ export const CreateMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
                     active={tabActive}
                     onClick={(e) => onChangeTab(e)}
                     components={[
-                        { tabActive: tabs.appointments, component: <Appointments key={nanoid()} /> },
-                        { tabActive: tabs.campaigns, component: <Campaigns key={nanoid()} /> },
-                        { tabActive: tabs.checkList, component: <CheckList key={nanoid()} /> },
-                        { tabActive: tabs.managementTasks, component: <ManagementTasks key={nanoid()} /> },
-                        { tabActive: tabs.profile, component: <Profile key={nanoid()} /> },
+                        { tabActive: tabs.appointments, component: <Appointments key={nanoid()} onchangePage={onchangePage}/> },
+                        { tabActive: tabs.campaigns, component: <Campaigns key={nanoid()} onchangePage={onchangePage}/> },
+                        { tabActive: tabs.checkList, component: <CheckList key={nanoid()} onchangePage={onchangePage}/> },
+                        { tabActive: tabs.managementTasks, component: <ManagementTasks key={nanoid()} onchangePage={onchangePage}/> },
+                        { tabActive: tabs.profile, component: <Profile key={nanoid()} onchangePage={onchangePage}/> },
 
                     ]}
                 />

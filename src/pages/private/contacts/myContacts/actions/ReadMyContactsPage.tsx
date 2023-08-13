@@ -4,7 +4,16 @@ import { useState } from 'react';
 import { GeneralLayout, HeaderLayout } from "@/components/layouts"
 
 //shared
-import { Button, CardState, NewDrawer, Search, SelectSingle, SimpleTable } from "@/shared"
+import {
+    Button,
+    CardState,
+    NewBadge,
+    NewDrawer,
+    NewModal,
+    Search,
+    SelectSingle,
+    SimpleTable
+} from "@/shared"
 
 //components
 import TableCell from '@mui/material/TableCell';
@@ -18,6 +27,9 @@ import { IGeneralsPropsPages, TTableStates } from "@/models";
 
 //icons
 import { IconFileImport, IconDownload, IconInfoSquareRounded } from '@tabler/icons-react';
+import { fireSuccessAlert } from '@/components';
+
+type TActionModal = 'import' | 'download'
 
 function createData(
     fullName: string,
@@ -33,9 +45,26 @@ function createData(
 
 export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
+    //drawer state
     const [showDrawer, setShowDrawer] = useState(false)
     const onOpenDrawer = () => setShowDrawer(true)
     const onCloseDrawer = () => setShowDrawer(false)
+
+    // modales states
+    const [showModalActionImport, setShowModalActionImport] = useState(false)
+    const [showModalActionDownload, setShowModalActionDownload] = useState(false)
+
+    const onOpenModal = (action: TActionModal) => {
+        action === 'import'
+            ? setShowModalActionImport(true)
+            : setShowModalActionDownload(true)
+    }
+
+    const onCloseModal = (action: TActionModal) => {
+        action === 'import'
+            ? setShowModalActionImport(false)
+            : setShowModalActionDownload(false)
+    }
 
     const rows = [
         createData('Andrea Paola Contreras Gaviria', ['Madre', 'Vip', 'Nuevo'], 'dir.mercadeo@cfc.com', 'Importado', [1, 1, 1, 1, 2,], '14/12/2021', 'success'),
@@ -69,6 +98,7 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
                         color="primary"
                         variant="hover-gray"
                         endIcon={<IconFileImport />}
+                        onClick={() => onOpenModal('import')}
                     >
                         Import
                     </Button>
@@ -78,6 +108,7 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
                         color="primary"
                         variant="hover-gray"
                         endIcon={<IconDownload />}
+                        onClick={() => onOpenModal('download')}
                     >
                         Descargar
                     </Button>
@@ -121,7 +152,7 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
                             <TableCell className="text-daisy-space-40" align="left">
                                 <div className="flex gap-x-2 items-center">
-                                    {row.tags.map(tag => (<div key={nanoid()} className="-bg--daisy-blue-jeans-20 -text--daisy-blue-jeans-100 rounded-2xl px-2 py-1">{tag}</div>))}
+                                    {row.tags.map(tag => <NewBadge value={tag} color='info' />)}
                                 </div>
                             </TableCell>
 
@@ -137,7 +168,7 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
                                                 key={nanoid()}
                                                 type="radio"
                                                 className="mask mask-star-2 -bg--daisy-yellow-60"
-                                                // checked
+                                            // checked
                                             />
                                         ))
                                     }
@@ -223,7 +254,58 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
             </NewDrawer>
 
+            <NewModal
+                titleBorder
+                title='Importar datos'
+                titlePosition='Center'
+                open={showModalActionImport}
+                onClickCancel={() => onCloseModal('import')}
+                onClickSave={() => {
+                    onCloseModal('import')
+                    fireSuccessAlert({ message: '' })
+                }}
+            >
+                <div className='h-32 my-5 text-sm cursor-pointer rounded-md border text-center border-gray-300 flex items-center justify-center'>
+                    Soltar archivo aquí
+                </div>
 
+                <div className='text-daisy-space-40 font-semibold'>
+                    Se puede cargar cualquier archivo .csv, .xls, .xlsx, .sml, con cualquier conjunto de columnas, siempre que tenga un registro por fila.
+                </div>
+
+            </NewModal>
+
+            <NewModal
+                title='Descargar'
+                open={showModalActionDownload}
+                onClickCancel={() => onCloseModal('download')}
+                onClickSave={() => {
+                    onCloseModal('download')
+                    fireSuccessAlert({ message: '' })
+                }}
+            >
+                <div>
+                    <div className="font-semibold">Contactos</div>
+
+                    <div className="flex gap-3 mb-4 mt-2">
+                        <SelectSingle inputLabel="Etiqueta" value={''} />
+                        <SelectSingle inputLabel="Estado" value={''} />
+                    </div>
+
+                    <div className="flex gap-3">
+                        <SelectSingle inputLabel="Fuente" value={''} />
+                        <SelectSingle inputLabel="Rating" value={''} />
+                    </div>
+
+                    <div className='flex gap-3 justify-end mt-4 items-center'>
+                        <input type="checkbox" className="toggle toggle-info" />
+                        <div className='text-daisy-space-60 text-sm font-semibold'>
+                            Todos los contactos
+                        </div>
+                    </div>
+                </div>
+
+            </NewModal>
         </GeneralLayout>
     )
 }

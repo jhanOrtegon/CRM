@@ -67,7 +67,7 @@ export const ReadRolesPermissionsPage = ({ onchangePage }: IGeneralsPropsPages) 
             >
               <TableCell className="text-daisy-space-40" align="left">{row.role}</TableCell>
               <TableCell className="text-daisy-space-40" align="center">{row.users}</TableCell>
-              <TableCell className="text-daisy-space-40" align="center">
+              <TableCell className="text-daisy-space-40" align="center" width={130}>
                 <CardState text={row.state ? 'Habilitado' : 'Inhabilitado'} type={row.state ? 'success' : 'error'} />
               </TableCell>
             </TableRow>

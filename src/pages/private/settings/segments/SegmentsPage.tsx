@@ -68,7 +68,7 @@ export const SegmentsPage = () => {
               <TableCell className="text-daisy-space-40" align="center">{row.dateCreation}</TableCell>
               <TableCell className="text-daisy-space-40" align="center">{row.contacts}</TableCell>
               <TableCell className="text-daisy-space-40" align="left">{row.createBy}</TableCell>
-              <TableCell className="text-daisy-space-40" align="center">
+              <TableCell className="text-daisy-space-40" align="center" width={130}>
                 <CardState text={row.state ? 'Habilitado' : 'Inhabilitado'} type={row.state ? 'success' : 'error'} />
               </TableCell>
             </TableRow>

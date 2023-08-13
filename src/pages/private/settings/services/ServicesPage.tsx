@@ -77,7 +77,7 @@ export const ServicesPage = () => {
               <TableCell className="text-daisy-space-40 p-2" align="center">{row.type}</TableCell>
               <TableCell className="text-daisy-space-40 p-2" align="left">{row.description}</TableCell>
               <TableCell className="text-daisy-space-40 p-2" align="right">{row.price}</TableCell>
-              <TableCell className="text-daisy-space-40 p-2" align="center">
+              <TableCell className="text-daisy-space-40 p-2" align="center" width={130}>
                 <CardState text={row.state ? 'Habilitado' : 'Inhabilitado'} type={row.state ? 'success' : 'error'} />
               </TableCell>
             </TableRow>

@@ -11,7 +11,6 @@ type TCardManagementHistory = {
     title: string
 }
 
-
 export const CardManagementHistory = ({ title }: TCardManagementHistory) => {
     return (
         <Card className="px-4 py-2">

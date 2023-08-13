@@ -11,8 +11,8 @@ type TCardState = {
 export const CardState = ({ type = 'success', text, title, mb, variant }: TCardState) => {
 
     let dynamicClass = ''
-
-    if (type === 'success') dynamicClass = '-bg--daisy-state-success -text--daisy-state-full-success'
+    // if (type === 'success') dynamicClass = '-bg--daisy-state-success -text--daisy-state-full-success'
+    if (type === 'success') dynamicClass = 'p-2 bg-daisy-green-leaf-20 text-daisy-green-leaf-80'
     if (type === 'success' && variant == 'full') dynamicClass = '-bg--daisy-state-full-success text-white'
 
     if (type === 'error') dynamicClass = '-bg--daisy-state-error -text--daisy-state-full-error'
@@ -36,7 +36,7 @@ export const CardState = ({ type = 'success', text, title, mb, variant }: TCardS
 
             {title ? <div className="font-bold">{title}</div> : ''}
 
-            <div className={`${variant == 'full' && type !== 'gray' ? 'text-white' : 'text-daisy-space-40'} text-sm`}>{text}</div>
+            <div style={{padding:'2px'}} className={`${variant == 'full' && type !== 'gray' ? 'text-white' : 'text-daisy-space-40'} text-sm`}>{text}</div>
 
         </Box>
     )

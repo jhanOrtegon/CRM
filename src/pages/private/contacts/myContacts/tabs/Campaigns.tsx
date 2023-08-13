@@ -1,6 +1,13 @@
+//layouts
 import { HeaderLayout } from "@/components/layouts"
+
+//shared
 import { CardState, NewInput, Search, SelectSingle, SimpleTable } from "@/shared"
+
+//components
 import { TableCell, TableRow } from "@mui/material"
+
+//utils
 import { nanoid } from "nanoid"
 
 function createData(
@@ -58,7 +65,7 @@ export const Campaigns = () => {
               <TableCell className="text-daisy-space-40" align="center">{row.date}</TableCell>
               <TableCell className="text-daisy-space-40" align="left">{row.nameCampaign}</TableCell>
               <TableCell className="text-daisy-space-40" align="left">{row.createdBy}</TableCell>
-              <TableCell className="text-daisy-space-40" align="center">
+              <TableCell className="text-daisy-space-40" align="center" width={130}>
                 <CardState text={row.state ? 'Abierto' : 'Rebotado'} type={row.state ? 'success' : 'error'} />
               </TableCell>
             </TableRow>

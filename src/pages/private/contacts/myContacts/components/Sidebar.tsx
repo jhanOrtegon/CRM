@@ -1,4 +1,7 @@
+//icons
 import avatarMen from '@/assets/images/avatars/avatarMen.png'
+
+//shared
 import { NewBadge, Text } from '@/shared'
 
 export const Sidebar = () => {
