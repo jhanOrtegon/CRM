@@ -1,7 +1,13 @@
-import { GeneralLayout } from "@/components/layouts"
+//pages actions
+import { ReadOpportunitiesPage } from ".";
+
 
 export const OpportunitiesPage = () => {
-  return (
-    <GeneralLayout>OpportunitiesPage</GeneralLayout>
-  )
+
+
+  const main = () => {
+     return <ReadOpportunitiesPage />
+  }
+
+  return main()
 }

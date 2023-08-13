@@ -5,7 +5,7 @@ import { breakPoints } from "@/utils"
 import { IconSquareRoundedPlus, IconSquareRoundedX } from '@tabler/icons-react';
 
 interface TButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: 'primary' | 'accent' | 'transparent' | 'full-transparent' | 'hover-gray'
+    variant?: 'primary' | 'accent' | 'transparent' | 'full-transparent' | 'hover-gray' | 'transparent-primary'
     startIcon?: JSX.Element,
     endIcon?: JSX.Element,
     opacity?: boolean
@@ -14,7 +14,7 @@ interface TButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = (props: TButton,) => {
-    const variant = (props?.variant || 'accent')
+    const variant = (props?.variant || 'primary')
     const { width } = useScreenSize()
     const opacity = props.opacity === false ? props.opacity : true
     return (
@@ -28,19 +28,21 @@ export const Button = (props: TButton,) => {
                     ? 'bg-accent'
                     : variant === 'transparent'
                         ? 'bg-white text-accent border-accent hover:bg-white'
-                        : variant === 'full-transparent'
-                            ? 'bg-transparent border-none text-daisy-space-40 hover:-bg--daisy-blue-jeans-20 hover:bg-opacity-100 justify-between 2xl:p-3'
-                            : variant === 'hover-gray' ? 'bg-transparent border-none text-daisy-space-80 hover:bg-daisy-space-20 font-medium'
-                            : 'bg-primary'} 
+                        : variant === 'transparent-primary'
+                            ? 'bg-white text-daisy-space-100 border-daisy-space-100 hover:bg-white'
+                            : variant === 'full-transparent'
+                                ? 'bg-transparent border-none text-daisy-space-40 hover:-bg--daisy-blue-jeans-20 hover:bg-opacity-100 justify-between 2xl:p-3'
+                                : variant === 'hover-gray' ? 'bg-transparent border-none text-daisy-space-80 hover:bg-daisy-space-20 font-medium'
+                                    : 'bg-primary'} 
                     ${!variant.includes('transparent') ? 'text-white' : ''}   w-full ${props?.className ? props?.className : ''}`}
             >
                 <div className="flex gap-x-2 items-center">
 
-                    {props.startIcon ? <div className={variant==='hover-gray' ? 'text-daisy-space-80' : ''}>{props.startIcon}</div> : ''}
+                    {props.startIcon ? <div className={variant === 'hover-gray' ? 'text-daisy-space-80' : ''}>{props.startIcon}</div> : ''}
 
-                    <div className={variant==='hover-gray' ? 'text-daisy-space-80' : ''}>{props.children}</div>
+                    <div className={variant === 'hover-gray' ? 'text-daisy-space-80' : ''}>{props.children}</div>
 
-                    {props.endIcon ? <div className={variant==='hover-gray' ? 'text-daisy-space-80' : ''}>{props.endIcon}</div> : ''}
+                    {props.endIcon ? <div className={variant === 'hover-gray' ? 'text-daisy-space-80' : ''}>{props.endIcon}</div> : ''}
 
                 </div>
 

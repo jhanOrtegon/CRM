@@ -1,2 +1,2 @@
-export * from './opportunities'
 export * from './salesProcesses'
+export * from './opportunities'
