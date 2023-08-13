@@ -121,7 +121,7 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
                             <TableCell className="text-daisy-space-40" align="left">
                                 <div className="flex gap-x-2 items-center">
-                                    {row.tags.map(tag => (<div className="-bg--daisy-blue-jeans-20 -text--daisy-blue-jeans-100 rounded-2xl px-2 py-1">{tag}</div>))}
+                                    {row.tags.map(tag => (<div key={nanoid()} className="-bg--daisy-blue-jeans-20 -text--daisy-blue-jeans-100 rounded-2xl px-2 py-1">{tag}</div>))}
                                 </div>
                             </TableCell>
 
@@ -133,7 +133,12 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
                                 <div className="rating rating-sm">
                                     {
                                         row.rating.map(() => (
-                                            <input type="radio" name="rating-5" className="mask mask-star-2 -bg--daisy-yellow-60" checked />
+                                            <input
+                                                key={nanoid()}
+                                                type="radio"
+                                                className="mask mask-star-2 -bg--daisy-yellow-60"
+                                                // checked
+                                            />
                                         ))
                                     }
 
@@ -162,7 +167,6 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
                 open={showDrawer}
                 onClose={onCloseDrawer}
                 onClickCancel={onCloseDrawer}
-
             >
 
                 <CardState
@@ -171,46 +175,50 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
                     title='Activo:'
                     text="Contactos que ha tenido una oportunidad y haya sido marcada como ganada. Se encuentra activo en la empresa"
                 />
-                
+
                 <CardState
                     mb={3}
                     type="error"
                     title='Inactivo:'
                     text="Estado asignado de manera manual, cliente que ha dejado de asistir a las instalaciones"
                 />
-                
+
                 <CardState
                     mb={3}
-                    type="error"
-                    title='Inactivo:'
-                    text="Estado asignado de manera manual, cliente que ha dejado de asistir a las instalaciones"
+                    type="info"
+                    title='Visitante:'
+                    text="Contacto que solo ha visitado nuestros sitios web o alguna landing page"
                 />
-                
+
                 <CardState
                     mb={3}
-                    type="error"
-                    title='Inactivo:'
-                    text="Estado asignado de manera manual, cliente que ha dejado de asistir a las instalaciones"
+                    type="warning"
+                    title='En oportunidad:'
+                    text="Cuando se ha iniciado una negociación o no se está trabajando activamente en la venta con el contacto"
                 />
-                
+
                 <CardState
                     mb={3}
-                    type="error"
-                    title='Inactivo:'
-                    text="Estado asignado de manera manual, cliente que ha dejado de asistir a las instalaciones"
+                    type="gray"
+                    variant='full'
+                    title='Pendiente:'
+                    text="Contacto que esta interesado en los servicios  y esta listo para ser contactado de manera directa con un asesor"
                 />
-                
+
                 <CardState
                     mb={3}
-                    type="error"
-                    title='Inactivo:'
-                    text="Estado asignado de manera manual, cliente que ha dejado de asistir a las instalaciones"
+                    type="success"
+                    variant='full'
+                    title='Lead nuevo:'
+                    text="Contacto agregado por primera vez y aún no se ha realizado ningún tipo de seguimiento o interacción con el. (manual, por formulario, o bot)"
                 />
-                
+
                 <CardState
+                    mb={5}
                     type="error"
-                    title='Inactivo:'
-                    text="Estado asignado de manera manual, cliente que ha dejado de asistir a las instalaciones"
+                    variant='full'
+                    title='Lea perdido:'
+                    text="Oportunidad perdida"
                 />
 
             </NewDrawer>

@@ -12,15 +12,15 @@ input[data-autocompleted] {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #4377EB;
-    border: 6px solid rgba(0, 0, 0, 0.2);
+    background: #5FBAFC;
+    /* border: 6px solid rgba(0, 0, 0, 0.2); */
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #4377EB;
+    background: #5FBAFC;
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -29,6 +29,10 @@ input[data-autocompleted] {
 
 .font-extralight-100{
     font-weight: 100;
+}
+
+.size11{
+    font-size: 11px;
 }
 
 .shadow-none-focus:focus {

@@ -15,9 +15,11 @@ module.exports = {
         'new-1x3': '1fr 1fr 1fr',
         'new-1x4': '1fr 1fr 1fr 1fr',
         'new-1x5': '1fr 1fr 1fr 1fr 1fr',
+        'new-1-3': '1fr 3fr',
         'new-1-4': '1fr 4fr',
         'new-1-2': '1fr 2fr',
         'new-custom': '2fr 2fr 4fr 2fr 1fr 1fr',
+        'new-sidebar':'350px 1fr'
       },
       colors:
       {
@@ -196,7 +198,7 @@ module.exports = {
         '--daisy-state-full-success': '#B0E17F',
         '--daisy-state-full-error': '#FF756D',
         '--daisy-state-full-info': '#7FC8FD',
-        '--daisy-state-full-warning': '#FFFBEE',
+        '--daisy-state-full-warning': '#ffd343 ',
         '--daisy-state-full-gray': '#E9E9EE',
 
       },

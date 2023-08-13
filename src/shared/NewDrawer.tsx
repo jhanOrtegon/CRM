@@ -34,7 +34,7 @@ export const NewDrawer = ({
             <NewDiv
                 anchor={anchorDrawer}
                 style={{
-                    height: '100vh',
+                    height: '100%',
                     padding: '70px 50px 50px 50px',
                     display: 'flex',
                     flexDirection: 'column',
@@ -52,7 +52,7 @@ export const NewDrawer = ({
                     </div>
                 ) : ''}
 
-                <div className="overflow-y-auto">
+                <div>
                     {children}
                 </div>
 

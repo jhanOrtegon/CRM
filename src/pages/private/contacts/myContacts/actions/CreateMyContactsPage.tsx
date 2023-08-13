@@ -1,31 +1,60 @@
-//components
-// import { fireSuccessAlert } from "@/components"
-import { GeneralLayout } from "@/components/layouts"
+import { useState } from 'react';
+
+//utils
+import { nanoid } from 'nanoid';
+
+//layouts
+import { GeneralLayout, SidebarLayout } from "@/components/layouts"
 
 //models
 import { IGeneralsPropsPages } from "@/models"
-// import { Card, FooterButton, NewInput, SelectSingle, Text } from "@/shared"
 
+//components
+import { Header, Sidebar } from "../components"
+
+//shared
+import { MultiTabs } from '@/shared';
+import { Appointments, Campaigns, CheckList, ManagementTasks, Profile } from '../tabs';
+
+const tabs = {
+    appointments: 'Citas',
+    campaigns: 'Campañas',
+    checkList: 'Check list',
+    managementTasks: 'Tareas de gestión',
+    profile: 'Perfil'
+}
 
 export const CreateMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
-    // const handleValidForm = () => {
+    const [tabActive, setTabActive] = useState<string>('')
 
-    //     fireSuccessAlert(
-    //       { message: 'Andrea Paola Contreras Gaviria' }
-    //     ).then(({ isConfirmed }) => {
-    //       if (isConfirmed) onchangePage('READ')
-    //     })
+    const onChangeTab = (tab: string) => setTabActive(tab)
     
-    //   }
-
     return (
-        <GeneralLayout title="Contacto" goBack={() => onchangePage('READ')}>
+        <GeneralLayout
+            outPaddingBottom
+            title="Contacto"
+            goBack={() => onchangePage('READ')}
+            component={<Header />}
+        >
 
-            {/* <FooterButton 
-                onClickSave={handleValidForm}
-                onClickCancel={()=>onchangePage('READ')}
-            /> */}
+            <SidebarLayout component={<Sidebar />}>
+
+                <MultiTabs
+                    listNames={[tabs.managementTasks, tabs.appointments, tabs.campaigns, tabs.checkList, tabs.profile]}
+                    active={tabActive}
+                    onClick={(e) => onChangeTab(e)}
+                    components={[
+                        { tabActive: tabs.appointments, component: <Appointments key={nanoid()} /> },
+                        { tabActive: tabs.campaigns, component: <Campaigns key={nanoid()} /> },
+                        { tabActive: tabs.checkList, component: <CheckList key={nanoid()} /> },
+                        { tabActive: tabs.managementTasks, component: <ManagementTasks key={nanoid()} /> },
+                        { tabActive: tabs.profile, component: <Profile key={nanoid()} /> },
+
+                    ]}
+                />
+
+            </SidebarLayout>
 
         </GeneralLayout>
     )

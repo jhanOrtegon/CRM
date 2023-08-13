@@ -20,7 +20,8 @@ export const Button = (props: TButton,) => {
     return (
         <div className="flex items-center">
             <button
-                {...props}
+                onClick={props?.onClick}
+                onChange={props?.onChange}
                 style={width >= breakPoints.lg ? { minHeight: '2.5rem', height: '2.5rem' } : { minHeight: '2.5rem', height: '2.5rem' }}
                 type='button'
                 className={`btn ${opacity ? 'hover:opacity-80' : ''} ${variant === 'accent'
