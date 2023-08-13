@@ -21,6 +21,7 @@ module.exports = {
         'new-1-1-1-2': '1fr 1fr 1fr 2fr',
         'new-1x4': '1fr 1fr 1fr 1fr',
         'new-1x5': '1fr 1fr 1fr 1fr 1fr',
+        'new-1x6': '1fr 1fr 1fr 1fr 1fr 1fr',
         'new-1-3': '1fr 3fr',
         'new-3-1': '3fr 3fr',
         'new-1-4': '1fr 4fr',

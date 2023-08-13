@@ -7,6 +7,7 @@ import Fade from '@mui/material/Fade';
 
 type TModal = {
     open: boolean,
+    subTitleTop?:string,
     title?: 'Crear' | string,
     titleOutMargin?: boolean
     titlePosition?: 'Center'
@@ -35,6 +36,7 @@ export const NewModal = ({
     onClickCancel,
     onClickSave,
     open,
+    subTitleTop,
     children,
     nameSave = 'Guardar',
     nameCancel = 'Cancelar',
@@ -67,8 +69,10 @@ export const NewModal = ({
                 <Fade in={open}>
                     <Box
                         sx={style}
-                        className={`${size === 'large' ? 'w-10/12' : size === 'medium' ? 'w-6/12' : 'w-4/12'} max-w-5xl focus-visible:outline-none rounded-2xl text-daisy-space-100`}
+                        className={`${size === 'large' ? 'w-8/12' : size === 'medium' ? 'w-6/12' : 'w-4/12'} max-w-5xl focus-visible:outline-none rounded-2xl text-daisy-space-100`}
                     >
+                        {subTitleTop ? <div className='text-xs'>{subTitleTop}</div> : ''}
+
                         {title && <div className={`font-bold ${titleSize === 'medium' ? 'text-2xl' : titleSize == 'small' ? 'text-xl' : ''} ${!titleOutMargin ? 'pb-4' : '' }  ${titlePosition ? 'text-center' : ''} ${titleBorder ? 'border-b border-gray-400' : ''}`}>{title}</div>}
 
                         <div>
