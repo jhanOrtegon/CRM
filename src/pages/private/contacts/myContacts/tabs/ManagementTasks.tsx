@@ -10,7 +10,7 @@ import { IconBrandWaze, IconBrandWhatsapp, IconMailFilled, IconPhoneFilled } fro
 
 export const ManagementTasks = () => {
   return (
-    <div>
+    <div className="animate__animated animate__fadeIn">
 
       <Card className="px-4 py-2">
         <div>
@@ -40,7 +40,6 @@ export const ManagementTasks = () => {
         <CardManagementHistory title="Nuevo recordatorio"/>
 
       </div>
-
 
     </div>
   )

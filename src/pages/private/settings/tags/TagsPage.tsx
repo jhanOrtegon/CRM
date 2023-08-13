@@ -14,26 +14,26 @@ function createData(
   return { color, tags, contacts, state };
 }
 
+const rows = [
+  createData('blue', 'Donante', 8, true),
+  createData('blue', 'Donante', 8, true),
+  createData('blue', 'Donante', 8, true),
+  createData('blue', 'Donante', 8, true),
+  createData('blue', 'Donante', 8, true),
+  createData('blue', 'Donante', 8, true),
+
+  createData('Yellow', 'Mamá', 5, false),
+  createData('Yellow', 'Mamá', 5, false),
+  createData('Yellow', 'Mamá', 5, false),
+  createData('Yellow', 'Mamá', 5, false),
+];
+
 
 export const TagsPage = () => {
 
   const [showDrawer, setShowDrawer] = useState(false)
   const onOpenDrawer = () => setShowDrawer(true)
   const onCloseDrawer = () => setShowDrawer(false)
-
-  const rows = [
-    createData('blue', 'Donante', 8, true),
-    createData('blue', 'Donante', 8, true),
-    createData('blue', 'Donante', 8, true),
-    createData('blue', 'Donante', 8, true),
-    createData('blue', 'Donante', 8, true),
-    createData('blue', 'Donante', 8, true),
-
-    createData('Yellow', 'Mamá', 5, false),
-    createData('Yellow', 'Mamá', 5, false),
-    createData('Yellow', 'Mamá', 5, false),
-    createData('Yellow', 'Mamá', 5, false),
-  ];
 
   return (
     <GeneralLayout title="Etiquetas" anchor="small">
@@ -46,7 +46,6 @@ export const TagsPage = () => {
       </HeaderLayout>
 
       <SimpleTable
-
         TableHeadRow={(
           <TableRow className="bg-daisy-space-100 text-white">
             <TableCell className="text-white" align="center">Color</TableCell>

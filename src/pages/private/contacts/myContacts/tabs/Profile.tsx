@@ -1,5 +1,7 @@
 export const Profile = () => {
   return (
-    <div>Profile</div>
+    <div className="animate__animated animate__fadeIn">
+      
+    </div>
   )
 }

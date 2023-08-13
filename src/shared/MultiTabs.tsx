@@ -31,7 +31,7 @@ export const MultiTabs = ({ listNames, active, className, color = 'blue', size =
 
 
     return (
-        <div className=''>
+        <div>
             <div className={`tabs mb-5 ${variant === 'boxed' ? 'tabs-boxed' : ''} ${className ? className : ''}`}>
                 {
                     listNames?.map((tab, index) => (
@@ -47,7 +47,7 @@ export const MultiTabs = ({ listNames, active, className, color = 'blue', size =
                 }
             </div>
 
-            <div className='transition-all'>
+            <div>
                 {components?.map((tab) => tab?.tabActive === active ? tab.component : '')}
             </div>
 
