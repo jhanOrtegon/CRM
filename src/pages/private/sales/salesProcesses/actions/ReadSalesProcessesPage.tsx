@@ -43,7 +43,7 @@ export const ReadSalesProcessesPage = () => {
     ];
 
     return (
-        <GeneralLayout title="Usuarios">
+        <GeneralLayout title="Procesos de ventas">
 
             <HeaderLayout>
                 <div className="grid gap-5 grid-cols-new-1-3-1-1 items-center">

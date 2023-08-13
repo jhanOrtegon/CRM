@@ -36,7 +36,7 @@ export const CreateSalesProcessesPage = ({ showModal, onClosed }: TCreateSalesPr
             onClickCancel={onClosed}
             onClickSave={() => {
                 onClosed()
-                fireSuccessAlert({ message: 'IconSquareRoundedPlusFilled ' })
+                fireSuccessAlert({ message: '' })
             }}
         >
             <NewInput
