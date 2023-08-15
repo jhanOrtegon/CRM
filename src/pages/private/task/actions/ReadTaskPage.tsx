@@ -13,6 +13,7 @@ import { CardInfoTab, TLisItem } from "../components";
 //utils
 import { nanoid } from "nanoid";
 import { DailyTasks, ExpiredTasks, History } from "../tabs";
+import { CreateTaskPage } from ".";
 
 const tabs = {
     dailyTasks: 'Tareas diarias',
@@ -22,6 +23,7 @@ const tabs = {
 
 export const ReadTaskPage = () => {
 
+    // in the future this will be changed, because at the time it was done running
     const [listExpiredTasks, setListExpiredTasks] = useState([
         {
             id: nanoid(),
@@ -125,9 +127,15 @@ export const ReadTaskPage = () => {
 
     ])
 
+    // state local tabs
     const [tabActive, setTabActive] = useState<string>(tabs.dailyTasks)
-
     const onChangeTab = (tab: string) => setTabActive(tab)
+
+    
+    // state modal create opportunity
+    const [showModalCreate, setShowModalCreate] = useState(false)
+    const onOpenModalCreate = () => setShowModalCreate(true)
+    const onCloseModalCreate = () => setShowModalCreate(false)
 
     const renderChildrenHeader = () => {
 
@@ -187,7 +195,7 @@ export const ReadTaskPage = () => {
                     </div>
                     <Button
                         variant="accent"
-                    // onClick={onOpenModalCreate}
+                        onClick={onOpenModalCreate}
                     >
                         Crear tarea
                     </Button>
@@ -243,7 +251,10 @@ export const ReadTaskPage = () => {
 
             </div>
 
-
+            <CreateTaskPage
+                onClosed={() => onCloseModalCreate()}
+                showModal={showModalCreate}
+            />
 
         </GeneralLayout>
     )
