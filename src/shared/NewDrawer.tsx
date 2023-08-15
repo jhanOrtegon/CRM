@@ -9,7 +9,10 @@ interface TNewDrawer extends DrawerProps {
     isAction?: boolean,
     nameAction?: string,
     title?: string,
-    footerHide?: boolean
+    footerHide?: boolean,
+    btnColor?: 'Primary' | 'Secondary',
+    nameSave?: 'Guardar' | 'Siguiente' | 'Continuar' | string,
+    nameCancel?: 'Cancelar' | 'Regresar' | string,
 }
 
 export const NewDrawer = ({
@@ -23,7 +26,10 @@ export const NewDrawer = ({
     isAction = false,
     nameAction = 'Crear',
     footerHide = false,
-    title
+    title,
+    btnColor = 'Secondary',
+    nameSave = 'Guardar',
+    nameCancel = 'Cancelar',
 }: TNewDrawer) => {
     return (
         <Drawer
@@ -59,8 +65,8 @@ export const NewDrawer = ({
                 {
                     !footerHide ? (
                         <Box className="grid grid-cols-new-1x2 gap-4 items-center justify-center mt-auto">
-                            <Button className='btn' onClick={onClickCancel} variant='transparent'>Cancelar</Button>
-                            <Button onClick={onClickSave} >Guardar</Button>
+                            <Button className='btn' type='submit' onClick={onClickCancel} variant={btnColor === 'Primary' ? 'transparent-primary' : 'transparent'}>{nameCancel}</Button>
+                            <Button onClick={onClickSave} variant={btnColor === 'Primary' ? 'primary' : 'accent'}>{nameSave}</Button>
                         </Box>
                     ) : ''
                 }

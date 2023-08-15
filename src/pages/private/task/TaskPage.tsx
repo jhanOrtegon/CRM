@@ -1,9 +1,13 @@
-import { GeneralLayout } from "@/components/layouts"
+//pages actions
+import { ReadTaskPage } from ".";
+
 
 export const TaskPage = () => {
-    return (
-        <GeneralLayout>
-            TaskPage
-        </GeneralLayout>
-    )
+
+
+  const main = () => {
+     return <ReadTaskPage />
+  }
+
+  return main()
 }

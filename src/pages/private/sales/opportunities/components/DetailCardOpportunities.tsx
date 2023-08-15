@@ -26,7 +26,7 @@ const rows = [
 ];
 
 
-export const DetailCardOpportunities = ({onClosed,onSave,showModal }) => {
+export const DetailCardOpportunities = ({ onClosed, onSave, showModal }) => {
     return (
         <NewModal
             btnColor="Primary"
@@ -108,8 +108,19 @@ export const DetailCardOpportunities = ({onClosed,onSave,showModal }) => {
             </div>
 
             <div className="flex gap-x-3 items-center mt-6">
-                <NewBadge value="Crear tarea" size="md" className="text-daisy-space-100 bg-daisy-space-20 hover cursor-pointer transition-all hover:scale-105" />
-                <NewBadge value="Finalizar oportunidad" size="md" className='text-white -bg--daisy-red-100 cursor-pointer transition-all hover:scale-105' />
+                <NewBadge
+                    color="custom"
+                    value="Crear tarea"
+                    size="md"
+                    className="text-daisy-space-100 bg-daisy-space-20 cursor-pointer transition-all hover:scale-105"
+                />
+
+                <NewBadge
+                    color="custom"
+                    value="Finalizar oportunidad"
+                    size="md"
+                    className='text-white cursor-pointer transition-all hover:scale-105 bg-daisy-green-leaf-100'
+                />
             </div>
 
         </NewModal>

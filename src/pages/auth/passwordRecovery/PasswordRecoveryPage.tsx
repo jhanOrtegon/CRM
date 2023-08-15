@@ -88,7 +88,7 @@ export const PasswordRecoveryPage = () => {
                                     <div className="text-daisy-space-40">¿Recuerdas la contraseña?</div>
 
                                     <div 
-                                        className="p-3 -text--daisy-blue-jeans-100  daisy-hover-blue-jeans-100 rounded-lg cursor-pointer"
+                                        className="p-2 -text--daisy-blue-jeans-100  daisy-hover-blue-jeans-100 rounded-lg cursor-pointer"
                                         onClick={() => navigate("/auth/login",{replace:true})}
                                     >
                                         <div>Iniciar sesión</div>

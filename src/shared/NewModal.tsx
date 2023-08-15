@@ -40,10 +40,10 @@ export const NewModal = ({
     children,
     nameSave = 'Guardar',
     nameCancel = 'Cancelar',
+    btnColor = 'Secondary',
     size = 'medium',
     title = 'Crear',
     titleSize = 'medium',
-    btnColor = 'Secondary',
     titlePosition,
     titleBorder,
     titleOutMargin = false

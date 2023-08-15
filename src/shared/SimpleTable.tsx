@@ -18,7 +18,7 @@ export function SimpleTable({ TableHeadRow, TableBodyRow, anchor='large', size =
     const { width } = useScreenSize()
 
     return (
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} variant='outlined'>
             <Table
                 size={width >= breakPoints.xl ? 'medium' : size}
                 aria-label="simple table"
