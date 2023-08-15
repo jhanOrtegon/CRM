@@ -1,15 +1,8 @@
 //shared
-import { NewInput, NewModal, SimpleTable, } from "@/shared"
+import { NewInput, NewModal, SelectSingle, Textarea, NewCheckBox } from '@/shared';
 
 //components
 import { fireSuccessAlert } from '@/components';
-import { TableCell, TableRow } from "@mui/material";
-
-//icons
-import { IconSquareRoundedPlusFilled, IconTrash } from '@tabler/icons-react';
-
-//utils
-import { nanoid } from "nanoid";
 
 
 type TCreateSalesProcessesPage = {
@@ -17,21 +10,11 @@ type TCreateSalesProcessesPage = {
     onClosed: () => void
 }
 
-function createData(
-    nameStage: string,
-    probability: number,
-) {
-    return { nameStage, probability };
-}
-
-const rows = [
-    createData('Etapa 3', 10),
-];
-
 export const CreateTaskPage = ({ showModal, onClosed }: TCreateSalesProcessesPage) => {
 
     return (
         <NewModal
+            btnColor="Primary"
             titleSize="small"
             title="Crear tarea"
             open={showModal}
@@ -41,46 +24,36 @@ export const CreateTaskPage = ({ showModal, onClosed }: TCreateSalesProcessesPag
                 fireSuccessAlert({ message: '' })
             }}
         >
-            <NewInput
-                required
-                label="Nombre del proceso de ventas"
-                color="secondary"
-            />
-
-            <div className="mt-5">
-                <SimpleTable
-                    TableHeadRow={(
-                        <TableRow>
-                            <TableCell style={{fontWeight:'bold'}} className="text-daisy-space-100" align="left">Nombre etapa</TableCell>
-                            <TableCell style={{fontWeight:'bold'}} className="text-daisy-space-100" align="center">Probabilidad</TableCell>
-                            <TableCell align="center"></TableCell>
-
-                        </TableRow>
-                    )}
-
-                    TableBodyRow={(
-                        rows.map((row) => (
-                            <TableRow
-                                key={nanoid()}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                className="hover:bg-daisy-space-10"
-                            >
-                                <TableCell className="text-daisy-space-40" align="left">{row.nameStage}</TableCell>
-                                <TableCell className="text-daisy-space-40" align="center">{row.probability}%</TableCell>
-                                <TableCell className="text-daisy-space-40" align="center" width={50}>
-                                    <IconTrash height={18} width={18} className="cursor-pointer"/>
-                                </TableCell>
-                            </TableRow>
-                        ))
-                    )}
+            <div className="grid gap-y-4 mb-4">
+                <NewInput
+                    required
+                    label="Nombre la tarea"
+                    color="secondary"
                 />
 
-                <div className="flex gap-3 items-center justify-end text-sm mt-3 text-gray-400 cursor-pointer">
-                    <div>Agregar fila</div>
-                    <IconSquareRoundedPlusFilled height={18} width={18}/>
-                </div>
+                <SelectSingle inputLabel="Tipo" value={''} color="secondary" />
             </div>
 
+            <div className="grid mb-4 gap-x-4 grid-cols-new-1x2">
+                <SelectSingle inputLabel="Responsable" value={''} color="secondary" />
+                <SelectSingle inputLabel="Tipo de plazo" value={''} color="secondary" />
+            </div>
+
+            <div className="grid mb-4 gap-x-4 grid-cols-new-1x2">
+                <NewInput required label="Fecha de vencimiento" />
+                <SelectSingle inputLabel="Contacto relacionado" value={''} color="secondary" />
+            </div>
+
+            <div className='mb-2'>
+                <Textarea placeholder="Descripción"/>
+            </div>
+
+            <div className='flex gap-x-3 items-center ml-1'>
+                <NewCheckBox defaultChecked/> 
+                <div className='text-sm font-normal text-gray-900 '>
+                    Esto es una tarea automática
+                </div>
+            </div>
 
         </NewModal>
     )

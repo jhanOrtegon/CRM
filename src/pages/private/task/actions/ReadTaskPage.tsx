@@ -187,7 +187,7 @@ export const ReadTaskPage = () => {
                         <input
                             type="checkbox"
                             className="toggle toggle-info"
-                        // onChange={(e) => setShowBoard(e.target.checked)}
+                            // onChange={(e) => setShowBoard(e.target.checked)}
                         />
                         <div className='text-daisy-space-60 text-sm font-semibold'>
                             Modo agenda

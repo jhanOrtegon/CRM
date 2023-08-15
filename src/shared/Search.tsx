@@ -11,7 +11,7 @@ export const Search = (props: TSearch) => {
                     {...props}
                     type="text"
                     placeholder="Buscar"
-                    className="input input-bordered w-full px-2 pr-10 bg-daisy-space-10 rounded-lg h-10 text-daisy-space-100 font-normal focus:outline-0"
+                    className="input input-bordered w-full px-2 pr-10 bg-daisy-space-10 rounded h-10 text-daisy-space-100 font-normal focus:outline-0"
                 />
                 <IconSearch className='absolute right-2 cursor-pointer text-daisy-space-100' size={15}/>
             </div>

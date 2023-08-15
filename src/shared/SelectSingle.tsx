@@ -15,12 +15,6 @@ export const SelectSingle = ({ inputLabel, id, value, onChange, color }: ISelect
   const unique = nanoid()
   const { width } = useScreenSize()
 
-  // const [age, setAge] = React.useState('');
-
-  // const handleChange = (event: SelectChangeEvent) => {
-  //   setAge(event.target.value);
-  // };
-
   return (
     <FormControl 
       sx={{ m: 0, width: '100%', p: 0 }} 
