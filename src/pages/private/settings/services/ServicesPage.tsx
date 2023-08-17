@@ -1,6 +1,7 @@
 import { fireSuccessAlert } from "@/components";
 import { GeneralLayout, HeaderLayout } from "@/components/layouts"
 import { Button, CardState, NewInput, NewDrawer, Search, SelectSingle, SimpleTable, Textarea } from "@/shared"
+import { Box } from "@mui/material";
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import { nanoid } from "nanoid";
@@ -123,11 +124,13 @@ export const ServicesPage = () => {
           sx={{ mb: 2 }}
         />
 
-        <NewInput
-          label="Subtipo"
-          color="secondary"
-          sx={{ mb: 2 }}
-        />
+        <Box mb={2}>
+          <SelectSingle
+            value={''}
+            color="secondary"
+            inputLabel="Especialidad"
+          />
+        </Box>
 
         <NewInput
           required

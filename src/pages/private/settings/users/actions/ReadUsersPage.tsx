@@ -40,9 +40,9 @@ export const ReadUsersPage = ({ onchangePage }: IGeneralsPropsPages) => {
       <HeaderLayout>
         <div className="grid gap-5 grid-cols-new-4 items-center">
           <SelectSingle inputLabel="Rol" value={''} />
-          <SelectSingle inputLabel="Area" value={''} />
+          <SelectSingle inputLabel="Área" value={''} />
           <Search />
-          <Button color="primary" onClick={()=> onchangePage("CREATE")}>
+          <Button variant="accent" onClick={()=> onchangePage("CREATE")}>
             Nuevo usuario
           </Button>
         </div>
