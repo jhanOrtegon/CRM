@@ -42,7 +42,7 @@ export const Sidebar = () => {
 
           <div>
             <div className='size11 text-daisy-space-100 font-normal'>
-              Numero de ID
+              Número de ID
             </div>
 
             <div className='text-sm text-daisy-space-60 font-normal'>
@@ -87,7 +87,7 @@ export const Sidebar = () => {
 
         <div className='mb-2'>
           <div className='size11 text-daisy-space-100 font-normal'>
-            Numero de contacto
+            Número de contacto
           </div>
 
           <div className='text-sm text-daisy-space-60 font-normal'>

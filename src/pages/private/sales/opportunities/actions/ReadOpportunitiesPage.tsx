@@ -51,7 +51,7 @@ export const ReadOpportunitiesPage = () => {
                             Ver tablero
                         </div>
                     </div>
-                    <Button color="primary" onClick={onOpenModalCreate}>
+                    <Button variant='accent' onClick={onOpenModalCreate}>
                         Crear oportunidad
                     </Button>
                 </div>

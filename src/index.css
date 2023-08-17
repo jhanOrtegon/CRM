@@ -13,8 +13,9 @@ input[data-autocompleted] {
 
 ::-webkit-scrollbar-thumb {
     background: #5FBAFC;
-    /* border: 6px solid rgba(0, 0, 0, 0.2); */
+    /* border-radius: 100px; */
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #5FBAFC;
 }
@@ -25,13 +26,24 @@ input[data-autocompleted] {
 
 ::-webkit-scrollbar-track {
     background-color: gray;
+    /* border-radius: 100px; */
 }
 
-.font-extralight-100{
+#cardBorder ::-webkit-scrollbar-track {
+    background-color: gray;
+    border-radius: 100px;
+}
+
+#cardBorder ::-webkit-scrollbar-thumb {
+    background: #5FBAFC;
+    border-radius: 100px;
+}
+
+.font-extralight-100 {
     font-weight: 100;
 }
 
-.size11{
+.size11 {
     font-size: 11px;
 }
 

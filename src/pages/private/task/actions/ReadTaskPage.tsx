@@ -168,7 +168,7 @@ export const ReadTaskPage = () => {
     }
 
     return (
-        <GeneralLayout title="Oportunidades" outPaddingBottom>
+        <GeneralLayout title="Gestión de tareas" outPaddingBottom>
 
             <HeaderLayout>
                 <div className="grid gap-5 grid-cols-new-1-1-2-1-1 items-center">

@@ -21,7 +21,7 @@ export const DashboardPage = () => {
                         <Card cardClass={'bg-white'} className="vh-44 sm:py-3 2xl:py-8">
                             <div className="flex gap-2 items-center justify-between">
                                 <div className="flex gap-2 items-center">
-                                    <div className="text-base -text--daisy-navy-blue-60 font-bold">Total reportes</div>
+                                    <div className="text-base -text--daisy-navy-blue-60 font-bold">Reporte de campañas</div>
                                     <IconAlertCircle className="-text--daisy-grey-50 h-8" />
                                 </div>
 
@@ -45,11 +45,11 @@ export const DashboardPage = () => {
                     </Grid>
 
                     <Grid xs={4}>
-                        <Card cardClass={'bg-white'} className="overflow-y-auto vh-44 justify-between gap-1 sm:text-sm sm:py-3 sm:px-6 2xl:p-8 2xl:text-base">
+                        <Card id={'cardBorder'} cardClass={'bg-white rounded-tr-none rounded-br-none'} className="overflow-y-auto vh-44 justify-between gap-1 sm:text-sm sm:py-3 sm:px-6 2xl:p-8 2xl:text-base">
                             <div className="flex gap-2 items-center justify-between">
 
                                 <div className="flex gap-2 items-center">
-                                    <div className="text-base -text--daisy-navy-blue-60 font-bold">Riesgos</div>
+                                    <div className="text-base -text--daisy-navy-blue-60 font-bold">Oportunidades</div>
                                     <IconAlertCircle className="-text--daisy-grey-50 h-5" />
                                 </div>
 
@@ -156,7 +156,7 @@ export const DashboardPage = () => {
                                 </div>
 
                                 <div>
-                                    <div className="font-semibold -text--daisy-navy-blue-60">Cumplimientos planes de acción</div>
+                                    <div className="font-semibold -text--daisy-navy-blue-60">Tareas de gestión</div>
 
                                     <div className="flex gap-3 items-center my-2">
                                         <div className="w-4 h-4 -bg--daisy-royal-blue-100 rounded-md" />
@@ -176,7 +176,9 @@ export const DashboardPage = () => {
                     <Grid xs={6}>
 
                         <Card cardClass={'bg-white'} className="vh-27 sm:py-2 2xl:py-8 ">
-                            <div className="font-semibold -text--daisy-navy-blue-60 text-center mt-3 sm:mb-1 2xl:mb-5">Riesgos con tratamiento</div>
+                            <div className="font-semibold -text--daisy-navy-blue-60 text-center mt-3 sm:mb-1 2xl:mb-5">
+                                n° de cumplimento
+                            </div>
 
                             <div className="flex gap-3 2xl:mb-2 text-sm text-end">
                                 <div className="-text--daisy-navy-blue-60 w-20">Alto</div>

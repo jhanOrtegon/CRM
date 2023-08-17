@@ -55,7 +55,7 @@ export const ReadSalesProcessesPage = () => {
                             Ver tablero
                         </div>
                     </div>
-                    <Button color="primary" onClick={onOpenModal}>
+                    <Button variant='accent' onClick={onOpenModal}>
                         Crear proceso
                     </Button>
                 </div>

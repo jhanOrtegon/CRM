@@ -110,7 +110,7 @@ export const ReadGrillaOpportunitiesPage = () => {
                             <TableCell className="text-daisy-space-80" align="center">
                                 <div className='flex gap-x-3 items-center justify-center'>
                                     <div>{row.closed}</div>
-                                    <div className="tooltip" data-tip="Proximo a vencer">
+                                    <div className="tooltip" data-tip="Próximo a vencer">
                                         <IconAlertCircle width={20} height={20} className='-text--daisy-red-100' />
                                     </div>
                                 </div>

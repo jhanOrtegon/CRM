@@ -12,19 +12,25 @@ export const CreateUsersPage = ({ onchangePage }: IGeneralsPropsPages) => {
     const handleValidForm = () => {
 
         fireSuccessAlert(
-          { message: 'Andrea Paola Contreras Gaviria' }
+            { message: 'Andrea Paola Contreras Gaviria' }
         ).then(({ isConfirmed }) => {
-          if (isConfirmed) onchangePage('READ')
+            if (isConfirmed) onchangePage('READ')
         })
-    
-      }
+
+    }
 
     return (
         <GeneralLayout title="Crear usuario" goBack={() => onchangePage('READ')}>
 
             <Card cardClass="bg-white" className="grid grid-cols-new-1-4 py-4 px-5 gap-5">
 
-                <Card className="2xl:h-48 p-0" />
+                <Card className="2xl:h-48 p-0 grid text-center items-center justify-center size11">
+                    <div>
+                        <div>Soltar foto aquí</div>
+                        <div>PNG o JPG 320 x 320 mpx</div>
+                    </div>
+                </Card>
+
 
                 <div>
                     <Text value="Usuario" mb={'mb-2'} />
@@ -50,7 +56,7 @@ export const CreateUsersPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
                     <SelectSingle inputLabel="Tipo de ID" value={''} />
                     <NewInput required label="Identificación" />
-                    <SelectSingle inputLabel="Genero" value={''} />
+                    <SelectSingle inputLabel="Género" value={''} />
                     <NewInput required label="Fecha nacimiento" />
 
                 </div>
@@ -60,23 +66,23 @@ export const CreateUsersPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
             <div className="my-4 2xl:my-7">
                 <Text value="Domicilio y contacto" mb={'mb-1 2xl:mb-4'} />
-                
+
                 <div className="flex gap-5 mb-5">
-                    <SelectSingle inputLabel="Tipo de ID" value={''} />
-                    <SelectSingle inputLabel="Genero" value={''} />
-                    <SelectSingle inputLabel="Genero" value={''} />
-                    <SelectSingle inputLabel="Genero" value={''} />
+                    <SelectSingle inputLabel="País" value={''} />
+                    <SelectSingle inputLabel="Departamento" value={''} />
+                    <SelectSingle inputLabel="Ciudad" value={''} />
+                    <SelectSingle inputLabel="Dirección de residencia" value={''} />
                 </div>
-                
-                <div className="grid gap-5 grid-cols-new-1-4">
-                    <NewInput required label="Teléfono" />
+
+                <div className="flex" style={{ gap: '20px' }}>
+                    <NewInput required label="Teléfono" style={{ width: '31.7%' }} />
                     <NewInput required label="Correo electrónico" />
                 </div>
             </div>
 
-            <FooterButton 
+            <FooterButton
                 onClickSave={handleValidForm}
-                onClickCancel={()=>onchangePage('READ')}
+                onClickCancel={() => onchangePage('READ')}
             />
 
         </GeneralLayout>

@@ -40,7 +40,7 @@ export const AreasPage = () => {
       <HeaderLayout>
         <div className="grid gap-5 grid-cols-new-2 items-center">
           <Search />
-          <Button color="primary" onClick={onOpenDrawer}>Nueva área</Button>
+          <Button variant="accent" onClick={onOpenDrawer}>Nueva área</Button>
         </div>
       </HeaderLayout>
 

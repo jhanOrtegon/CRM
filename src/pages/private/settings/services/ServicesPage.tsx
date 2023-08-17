@@ -45,7 +45,7 @@ export const ServicesPage = () => {
           <SelectSingle inputLabel="Estado" value={''} />
           <Search />
           <Button
-            color="primary"
+            variant="accent"
             onClick={onOpenDrawer}
           >
             Nuevo servicio

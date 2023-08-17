@@ -76,7 +76,7 @@ export const CreateOpportunityStageThree = () => {
 
                     <div className="cursor-pointer flex gap-x-3 items-center ml-1 text-xs">
                         <NewCheckBox defaultChecked/>
-                        <div>Ajustar costo según valor asignado de la oportunidad(actualizar)</div>
+                        <div>Ajustar costo según valor asignado de la oportunidad (actualizar)</div>
                     </div>
 
                     <div className="flex gap-x-3 cursor-pointer items-center">

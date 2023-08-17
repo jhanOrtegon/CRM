@@ -27,7 +27,7 @@ export const Profile = ({ onchangePage }: IGeneralsPropsPages) => {
           <NewInput
             required
             fullWidth
-            label="Numero de ID"
+            label="Número de ID"
             color="secondary"
           />
 
@@ -48,7 +48,7 @@ export const Profile = ({ onchangePage }: IGeneralsPropsPages) => {
             required
             fullWidth
             type="number"
-            label="Numero de contacto"
+            label="Número de contacto"
             color="secondary"
           />
         </div>

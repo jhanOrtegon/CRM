@@ -32,7 +32,12 @@ export const CreateAccountPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
       <Card cardClass="bg-white" className="grid grid-cols-new-1-4 p-5 gap-5">
 
-        <Card className="h-36 2xl:h-48" />
+        <Card className="h-36 2xl:h-48 grid text-center items-center justify-center size11">
+          <div>
+            <div>Soltar logo aquí</div>
+            <div>PNG o JPG 320 x 320 mpx</div>
+          </div>
+        </Card>
 
         <div>
           <Text value="Información general" mb={'mb-3'} />

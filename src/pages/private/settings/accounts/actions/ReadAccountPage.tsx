@@ -41,7 +41,7 @@ export const ReadAccountPage = ({ onchangePage }: IGeneralsPropsPages) => {
         <div className="grid gap-5 grid-cols-new-3 items-center">
           <SelectSingle inputLabel="Tipo de sociedad" value={''} />
           <Search />
-          <Button color="primary" onClick={()=>onchangePage("CREATE")}>
+          <Button variant="accent" onClick={()=>onchangePage("CREATE")}>
             Nueva cuenta
           </Button>
         </div>

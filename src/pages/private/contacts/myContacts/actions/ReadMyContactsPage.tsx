@@ -89,7 +89,7 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
                     <Search />
 
-                    <Button color="primary" onClick={() => onchangePage("CREATE")}>
+                    <Button variant='accent' onClick={() => onchangePage("CREATE")}>
                         Nuevo contacto
                     </Button>
 
@@ -204,7 +204,7 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
                     mb={3}
                     type="success"
                     title='Activo:'
-                    text="Contactos que ha tenido una oportunidad y haya sido marcada como ganada. Se encuentra activo en la empresa"
+                    text="Contacto que ha tenido una oportunidad y haya sido marcada como ganada; Se encuentra activo en la empresa"
                 />
 
                 <CardState
@@ -248,7 +248,7 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
                     mb={5}
                     type="error"
                     variant='full'
-                    title='Lea perdido:'
+                    title='Lead perdido:'
                     text="Oportunidad perdida"
                 />
 
@@ -256,9 +256,17 @@ export const ReadMyContactsPage = ({ onchangePage }: IGeneralsPropsPages) => {
 
             <NewModal
                 titleBorder
+                hideBtnCancel
+                titleColor='Secondary'
                 title='Importar datos'
                 titlePosition='Center'
                 open={showModalActionImport}
+                btnNameChildren={(
+                    <div className='flex gap-x-3 items-center'>
+                        <div>Descargar plantilla de excel</div>
+                        <IconDownload />
+                    </div>
+                )}
                 onClickCancel={() => onCloseModal('import')}
                 onClickSave={() => {
                     onCloseModal('import')

@@ -42,7 +42,7 @@ export const SegmentsPage = () => {
         <div className="grid gap-5 grid-cols-new-3 items-center">
           <SelectSingle inputLabel="Estado" value={''} />
           <Search />
-          <Button color="primary" onClick={onOpenModal}>Crear tarea</Button>
+          <Button variant='accent' onClick={onOpenModal}>Nuevo segmento</Button>
         </div>
       </HeaderLayout>
 
@@ -50,7 +50,7 @@ export const SegmentsPage = () => {
         TableHeadRow={(
           <TableRow className="bg-daisy-space-100 text-white">
             <TableCell className="text-white" align="left">Nombre segmento</TableCell>
-            <TableCell className="text-white" align="center">F.creación</TableCell>
+            <TableCell className="text-white" align="center">F. Creación</TableCell>
             <TableCell className="text-white" align="center">Contactos</TableCell>
             <TableCell className="text-white" align="left">Creado por</TableCell>
             <TableCell className="text-white" align="center">Estado</TableCell>

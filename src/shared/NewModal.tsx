@@ -7,9 +7,10 @@ import Fade from '@mui/material/Fade';
 
 type TModal = {
     open: boolean,
-    subTitleTop?:string,
+    subTitleTop?: string,
     title?: 'Crear' | string,
     titleOutMargin?: boolean
+    hideBtnCancel?: boolean
     titlePosition?: 'Center'
     titleBorder?: boolean
     size?: 'small' | 'medium' | 'large',
@@ -17,7 +18,9 @@ type TModal = {
     nameSave?: 'Guardar' | 'Siguiente' | 'Continuar' | string,
     nameCancel?: 'Cancelar' | 'Regresar' | string,
     btnColor?: 'Primary' | 'Secondary'
+    titleColor?: 'Primary' | 'Secondary'
     children: ReactNode,
+    btnNameChildren?: ReactNode,
     onClickCancel?: () => void,
     onClickSave?: () => void,
 }
@@ -33,6 +36,7 @@ const style = {
 };
 
 export const NewModal = ({
+    btnNameChildren,
     onClickCancel,
     onClickSave,
     open,
@@ -41,11 +45,13 @@ export const NewModal = ({
     nameSave = 'Guardar',
     nameCancel = 'Cancelar',
     btnColor = 'Secondary',
+    titleColor = 'Primary',
     size = 'medium',
     title = 'Crear',
     titleSize = 'medium',
     titlePosition,
     titleBorder,
+    hideBtnCancel = false,
     titleOutMargin = false
 
 }: TModal) => {
@@ -69,19 +75,26 @@ export const NewModal = ({
                 <Fade in={open}>
                     <Box
                         sx={style}
-                        className={`${size === 'large' ? 'w-8/12' : size === 'medium' ? 'w-6/12' : 'w-4/12'} max-w-5xl focus-visible:outline-none rounded-2xl text-daisy-space-100`}
+                        className={`${size === 'large' ? 'w-8/12' : size === 'medium' ? 'w-6/12' : 'w-4/12'} max-w-5xl focus-visible:outline-none rounded-2xl ${titleColor === 'Primary' ? 'text-daisy-space-100' : 'text-accent'}`}
                     >
                         {subTitleTop ? <div className='text-xs'>{subTitleTop}</div> : ''}
 
-                        {title && <div className={`font-bold ${titleSize === 'medium' ? 'text-2xl' : titleSize == 'small' ? 'text-xl' : ''} ${!titleOutMargin ? 'pb-4' : '' }  ${titlePosition ? 'text-center' : ''} ${titleBorder ? 'border-b border-gray-400' : ''}`}>{title}</div>}
+                        {title && <div className={`font-bold ${titleSize === 'medium' ? 'text-2xl' : titleSize == 'small' ? 'text-xl' : ''} ${!titleOutMargin ? 'pb-4' : ''}  ${titlePosition ? 'text-center' : ''} ${titleBorder ? 'border-b border-gray-400' : ''}`}>{title}</div>}
 
                         <div>
                             {children}
                         </div>
 
                         <div className="flex gap-4 items-center justify-end mt-14">
-                            <Button className='btn' type='submit' onClick={onClickCancel} variant={btnColor === 'Primary' ? 'transparent-primary' : 'transparent'}>{nameCancel}</Button>
-                            <Button onClick={onClickSave} variant={btnColor === 'Primary' ? 'primary' : 'accent'}>{nameSave}</Button>
+                            {
+                                !hideBtnCancel ? (
+                                    <Button className='btn' type='submit' onClick={onClickCancel} variant={btnColor === 'Primary' ? 'transparent-primary' : 'transparent'}>{nameCancel}</Button>
+                                ) : <></>
+                            }
+
+                            <Button onClick={onClickSave} variant={btnColor === 'Primary' ? 'primary' : 'accent'}>
+                                {btnNameChildren || nameSave}
+                            </Button>
                         </div>
                     </Box>
                 </Fade>

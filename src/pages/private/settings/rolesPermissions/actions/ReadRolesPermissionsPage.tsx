@@ -43,7 +43,7 @@ export const ReadRolesPermissionsPage = ({ onchangePage }: IGeneralsPropsPages) 
       <HeaderLayout>
         <div className="grid gap-5 grid-cols-new-2 items-center">
           <Search />
-          <Button color="primary" onClick={() => onchangePage('CREATE')}>
+          <Button variant="accent" onClick={() => onchangePage('CREATE')}>
             Nuevo rol y permiso
           </Button>
         </div>
